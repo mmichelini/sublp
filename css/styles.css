@@ -170,6 +170,21 @@ h1,h2,h3,h4,h5 {
   margin-top: -70px;
   position: relative;
 }
+.carousel-box .owl-carousel button.owl-dot { 
+  background: rgba(255,255,255,.5)
+}
+.carousel-box .owl-carousel button.owl-dot.active {
+  background: #008644;
+}
+.carousel-box .owl-carousel .owl-nav .owl-next span,
+.carousel-box .owl-carousel .owl-nav .owl-prev span {
+  background: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 36px;
+}
 
 /* SPECIFICATION */
 .specifications {
@@ -304,6 +319,14 @@ h1,h2,h3,h4,h5 {
 .overview .carousel-2 {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+/* UGC */
+.ugc {
+  padding: 100px 0 60px 0;
+  margin-top: -100px;
+  margin-bottom: 40px;
+  background: #f2f2f2;
 }
 
 /* BEST SELLERS */

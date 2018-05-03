@@ -19,7 +19,7 @@
 
   <script>
     $(document).ready(function(){
-      $('.carousel-1').owlCarousel({
+      $('.carousel-lifestyle').owlCarousel({
           loop:true,
           nav:true,
           autoWidth:true,
@@ -36,7 +36,7 @@
           }
       })
 
-      $('.carousel-2').owlCarousel({
+      $('.carousel-subs').owlCarousel({
           loop:true,
           nav:true,
           margin: 20,
@@ -54,7 +54,24 @@
           }
       })
 
-      $('.carousel-3').owlCarousel({
+      $('.carousel-ugc').owlCarousel({
+          loop:true,
+          nav:true,
+          margin: 20,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:2
+              },
+              1000:{
+                  items:4
+              }
+          }
+      })
+
+      $('.carousel-beers').owlCarousel({
           loop:true,
           nav:true,
           margin: 20,
@@ -137,7 +154,7 @@
   <div class="carousel-box">
     <div class="carousel-box-inner">
 
-      <div class="owl-carousel carousel-1">
+      <div class="owl-carousel carousel-lifestyle">
         <div class="item"><img src="img/gallery/1.jpg" alt="First slide"></div>
         <div class="item"><img src="img/gallery/2.jpg" alt="First slide"></div>
         <div class="item"><img src="img/gallery/1.jpg" alt="First slide"></div>
@@ -324,7 +341,7 @@
           <div class="col-sm-12 text-center">
             <h1>Discover the sub</h1>
           </div>
-          <div class="owl-carousel carousel-2">
+          <div class="owl-carousel carousel-subs">
             <div class="text-center product-card">
               <img src="img/subs/sub_heineken.png">
               <h3>The Sub Heineken edition</h3>
@@ -363,6 +380,25 @@
   </div>
   <!-- SUB OVERVIEW - End -->
 
+  <!-- UGC - Start -->
+  <div class="ugc">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-12 text-center">
+          <h1>The SUB in action!</h1>
+          <h3>Bring home the perfect draught experience with #thesub</h3>
+        </div>
+        <div class="owl-carousel carousel-ugc">
+          <div><img src="img/ugc/1.jpg"></div>
+          <div><img src="img/ugc/2.jpg"></div>
+          <div><img src="img/ugc/3.jpg"></div>
+          <div><img src="img/ugc/4.jpg"></div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <!-- UGC - End -->
+
   <!-- BEST SELLERS - Start -->
   <div class="best-sellers">
     <div class="container">
@@ -370,7 +406,7 @@
         <div class="col-sm-12 text-center">
           <h1>Best sellers</h1>
         </div>
-        <div class="owl-carousel carousel-3">
+        <div class="owl-carousel carousel-beers">
           <div class="text-center product-card">
             <div class="product-card-inner">
               <img src="https://static.webshopapp.com/shops/095692/files/189231521/400x400x1/heineken-stock-up-bundle-best-before-31-05-2018.jpg">
