@@ -125,11 +125,11 @@ h1,h2,h3,h4,h5 {
 .usp .usp-block .usp-icon .icon-date { background: url(../img/usp/icon_date.png); background-size: cover; width:100%; height:100%;}
 
 /* CAROUSEL */
-.carousel-box, .carousel-box-inner {
+.carousel-box, .carousel-box-inner, .carousel-box .owl-carousel .owl-item img {
   height: 400px;
 }
 @media (min-width: 576px) {
-  .carousel-box, .carousel-box-inner {
+  .carousel-box, .carousel-box-inner, .carousel-box .owl-carousel .owl-item img {
     height: 600px;
   }
 }
@@ -163,17 +163,7 @@ h1,h2,h3,h4,h5 {
   }
 }
 
-.carousel-box .owl-carousel, 
-.carousel-box .owl-carousel .owl-stage-outer,
-.carousel-box .owl-carousel .owl-stage, 
-.carousel-box .owl-item {
-  height: 100%;
-}
-.carousel-box .owl-carousel .item {
-  height: 100%;
-}
 .carousel-box .owl-carousel .owl-item img {
-  height: 100%;
   width: auto;
 }
 .carousel-box .owl-carousel .owl-dots {
