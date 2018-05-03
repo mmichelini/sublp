@@ -240,6 +240,7 @@ h1,h2,h3,h4,h5 {
   text-transform: uppercase;
   color: #3e3b38;
   font-family: futura-bold;
+  font-weight: 500;
 }
 
 @media (min-width: 576px) {
@@ -348,6 +349,7 @@ h1,h2,h3,h4,h5 {
 
 .carousel, .carousel-item, .carousel-item img, .carousel-inner {
   height: 100%;
+  margin: 0px auto;
 }
 
 /* SPECIFICATION */
