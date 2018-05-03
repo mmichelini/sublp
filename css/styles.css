@@ -391,7 +391,7 @@ h1,h2,h3,h4,h5 {
   background: #f2f2f2;
   min-height: 750px;
   padding: 60px 0;
-  -webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0 90%);
+  -webkit-clip-path: polygon(0% 0%, 100% 3%, 100% 100%, 0 96%);
   clip-path: polygon(0% 0%, 100% 3%, 100% 100%, 0 96%);
 }
 @media (min-width: 576px) {
@@ -446,7 +446,7 @@ h1,h2,h3,h4,h5 {
   background: #3e3b38;
   min-height: 800px;
   padding: 80px 0;
-  -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0 90%);
+  -webkit-clip-path: polygon(0% 3%, 100% 0%, 100% 100%, 0 98%);
   clip-path: polygon(0% 3%, 100% 0%, 100% 100%, 0 98%);
 }
 @media (min-width: 576px) {
