@@ -344,7 +344,7 @@ h1,h2,h3,h4,h5 {
 
 /* BEST SELLERS */
 .best-sellers {
-  min-height: 800px;
+  margin-bottom: 60px;
   position: relative;
 }
 .best-sellers .product-card-inner {
