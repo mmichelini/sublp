@@ -103,7 +103,7 @@ h1,h2,h3,h4,h5 {
   color: #fff;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.61);
 }
-.hero h1, .hero h2 {
+.hero h1, .hero h2, .hero h4 {
   color: #fff;
 }
 
