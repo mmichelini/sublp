@@ -19,21 +19,24 @@
 
   <script>
     $(document).ready(function(){
+
+      $("#hide").click(function(){
+          $(".video-container").hide();
+          $("#video")[0].src += "&autoplay=0";
+      });
+      $("#show").click(function(){
+          $(".video-container").show();
+      });
+
       $('.carousel-lifestyle').owlCarousel({
           loop:true,
           nav:true,
           autoWidth:true,
           center: true,
           responsive:{
-              0:{
-                  items:1
-              },
-              600:{
-                  items:2
-              },
-              1000:{
-                  items:3
-              }
+              0:{ items:1 },
+              600:{ items:2 },
+              1000:{ items:3 }
           }
       })
 
@@ -42,16 +45,9 @@
           nav:true,
           margin: 20,
           responsive:{
-              0:{
-                  items:1
-              },
-              600:{
-                  items:2
-              },
-              1000:{
-                  items:4,
-                  loop:false
-              }
+              0:{ items:1 },
+              600:{ items:2 },
+              1000:{ items:4, loop:false }
           }
       })
 
@@ -60,15 +56,9 @@
           nav:true,
           margin: 20,
           responsive:{
-              0:{
-                  items:1
-              },
-              600:{
-                  items:2
-              },
-              1000:{
-                  items:4
-              }
+              0:{ items:1 },
+              600:{ items:2 },
+              1000:{ items:4 }
           }
       })
 
@@ -77,16 +67,9 @@
           nav:true,
           margin: 20,
           responsive:{
-              0:{
-                  items:1
-              },
-              600:{
-                  items:3,
-                  nav:true
-              },
-              1000:{
-                  items:4
-              }
+              0:{ items:1 },
+              600:{ items:3, nav:true },
+              1000:{ items:4 }
           }
       })
     });
@@ -104,6 +87,7 @@
           <h2>The Sub</h2>
           <h1>Premium draught beer on tap, at home</h1>
           <p>Pour like a pro and enjoy the best of beer with THE SUB.</p>
+          <button class="btn-green" id="show">Learn more</button>
         </div>
       </div>
     </div>
@@ -431,6 +415,13 @@
     </div>
   </div>
   <!-- BEST SELLERS - End -->
+
+  <div class="video-container">
+    <div class="video-inner">
+      <div class="close" id="hide"></div>
+      <iframe id="video" src="https://www.youtube.com/embed/k4t56cYn3UM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
 
 </body>
 </html>
