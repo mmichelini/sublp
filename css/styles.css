@@ -309,6 +309,16 @@ h1,h2,h3,h4,h5 {
   clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0 90%);
   z-index: -1;
 }
+.overview .product-card {
+  position: relative;
+}
+.overview .product-card a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 @media (max-width: 576px) {
   .overview .product-card {
     padding: 0 40px;
@@ -351,6 +361,16 @@ h1,h2,h3,h4,h5 {
   border: 1px solid #f2f2f2;
   padding:10px;
   margin-bottom: 20px;
+}
+.best-sellers .product-card {
+  position: relative;
+}
+.best-sellers .product-card a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .best-sellers .product-card img {
   width: 80%;
