@@ -15,6 +15,10 @@ body {
   color: #807d7c;
   font-family: futura-book;
   -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+}
+@media (min-width: 576px) {
+  body { font-size: 16px; }
 }
 
 h1,h2,h3,h4,h5 {
@@ -22,15 +26,11 @@ h1,h2,h3,h4,h5 {
   color: #3e3b38;
   font-family: futura-bold;
   font-weight: 500;
+  line-height: 1;
 }
-
 @media (min-width: 576px) {
-  h1 {
-    font-size: 2.6rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
+  h1 { font-size: 2.6rem; }
+  h2 { font-size: 2rem; }
 }
 
 .btn-green {
@@ -43,6 +43,9 @@ h1,h2,h3,h4,h5 {
   border-radius: 8px;
   margin-bottom: 20px;
   font-size: 16px;
+}
+.btn-green:hover {
+  background: #006e37;
 }
 
 .text-center {
@@ -328,7 +331,7 @@ h1,h2,h3,h4,h5 {
 
 /* UGC */
 .ugc {
-  padding: 100px 0 60px 0;
+  padding: 120px 15px 60px 15px;
   margin-top: -100px;
   margin-bottom: 40px;
   background: #f2f2f2;
