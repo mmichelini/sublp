@@ -8,8 +8,11 @@
 
 <!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+
 
   <script>
+      
       function genYT() {
           var div, n,
               v = document.getElementsByClassName("youtube-player");
@@ -51,9 +54,8 @@
      });
       $('.carousel-lifestyle').owlCarousel({
           loop:true,
-          nav:true,
-          autoWidth:true,
           lazyLoad:true,
+          nav:true,
           center: true,
           responsive:{
               0:{ items:1 },
@@ -99,6 +101,25 @@
       })
     });
   </script>
+<style>
+      a,
+    img {
+      display: block;
+    }
+    img {
+      border: 0;
+    }
+
+      img:not([src]) {
+      visibility: hidden;
+    }
+    /* Fixes Firefox anomaly during image load */
+    @-moz-document url-prefix() {
+      img:-moz-loading {
+        visibility: hidden;
+      }
+    }
+</style>
 <div class="wrapper view-home">
   <!-- Hero - Start -->
   <div class="hero">
@@ -177,11 +198,11 @@
   <div class="carousel-box">
     <div class="carousel-box-inner">
       <div class="owl-carousel carousel-lifestyle">
-          <picture>
-            <source class="owl-lazy" media="(min-width: 450px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/1.jpg">
-            <source class="owl-lazy" media="(max-width: 449px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/1-mobile.jpg">
-            <img class="owl-lazy"  data-src="https://placehold.it/350x250&text=3-fallback" alt="First slide"> 
-        </picture>
+      <img class="lazy"
+           src="https://placehold.it/350x250&text=3-fallback"
+           data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/1.jpg"
+           data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/1-mobile.jpg 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/1.jpg"
+           width="1024" height="768" />        
         <picture>
            <source class="owl-lazy" media="(min-width: 450px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/2.jpg">
            <source class="owl-lazy" media="(max-width: 449px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/2-mobile.jpg">
@@ -193,9 +214,9 @@
           <img class="owl-lazy" data-src="https://placehold.it/350x250&text=3-fallback" alt="Third slide">
         </picture>
         <picture>
-           <source class="owl-lazy" media="(min-width: 450px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/4.jpg">
-           <source class="owl-lazy" media="(max-width: 449px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/4-mobile.jpg">
-          <img class="owl-lazy" data-src="https://placehold.it/350x250&text=3-fallback" alt="Fourth slide">
+           <source class="lazy owl-lazy" media="(min-width: 450px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/4.jpg">
+           <source class="lazy owl-lazy" media="(max-width: 449px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/4-mobile.jpg">
+          <img class="lazy owl-lazy" data-src="https://placehold.it/350x250&text=3-fallback" alt="Fourth slide">
         </picture>
         <picture>
            <source class="owl-lazy" media="(min-width: 450px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/5.jpg">
@@ -206,7 +227,7 @@
            <source class="owl-lazy" media="(min-width: 450px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/6.jpg">
            <source class="owl-lazy" media="(max-width: 449px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/6-mobile.jpg">
           <img class="owl-lazy" data-src="https://placehold.it/350x250&text=3-fallback" alt="Sixth slide">
-        </picture>  
+        </picture>        
       </div>
     </div>
     <div class="carousel-box-bg">
@@ -295,7 +316,10 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-7 text-center">
-            <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg.png">
+            <img class="lazy" 
+              src="https://placehold.it/350x250&text=3-fallback"
+              data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg.png" 
+              data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg-mobile.png 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg.png">
           </div>
           <div class="col-12 col-md-5 text">
             <h2>TECHNOLOGY AT THE SERVICE OF TASTING</h2>
@@ -336,37 +360,37 @@
 
       <div class="row justify-content-center">
         <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
-          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-heineken.png">
+          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-heineken.png">
         </div>
         <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
-          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-desperados.png">
+          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-desperados.png">
         </div>
         <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
-          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-kalthausen.png">
+          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-kalthausen.png">
         </div>
         <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
-          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-sol.png">
+          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-sol.png">
         </div>
         <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
-          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-wieckse.png">
+          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-wieckse.png">
         </div>
         <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
-          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-pelforth.png">
+          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-pelforth.png">
         </div>
         <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
-          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-tiger.png">
+          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-tiger.png">
         </div>
         <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
-          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-cruzcampo.png">
+          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-cruzcampo.png">
         </div>
         <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
-          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-affligem.png">
+          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-affligem.png">
         </div>
         <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
-          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-moretti.png">
+          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-moretti.png">
         </div>
         <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
-          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-brand-up.png">
+          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-brand-up.png">
         </div>
 
       </div>
@@ -385,7 +409,7 @@
           <div class="owl-carousel carousel-subs">
             <div class="text-center product-card">
               <a href="https://nl.the-sub.com/en/"></a>
-              <img class="owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_heineken.png">
+              <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_heineken.png">
               <h3>The Sub Heineken edition</h3>
               <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
               <div class="price">€199.00</div>
@@ -434,10 +458,10 @@
           <h3>Bring home the perfect draught experience with #thesub</h3>
         </div>
         <div class="owl-carousel carousel-ugc">
-          <img class="owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/1.jpg">
-          <img class="owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/2.jpg">
-          <img class="owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/3.jpg">
-         <img class="owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/4.jpg">
+          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/1.jpg">
+          <img class="lazy owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/2.jpg">
+          <img class="lazy owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/3.jpg">
+         <img class="lazy owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/4.jpg">
         </div>
       </div>  
     </div>
@@ -455,7 +479,7 @@
           <div class="text-center product-card">
             <div class="product-card-inner">
               <a href="https://nl.the-sub.com/en/"></a>
-              <img class="owl-lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
+              <img class="lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
               <h3>Tasting bundle</h3>
               <p>4x Heineken TORPS, 2x H41 Wild Lager TORPS, 3x Affligem Blonde TORPS</p>
               <div class="price">€53,99</div>
@@ -464,7 +488,7 @@
           <div class="text-center product-card">
             <div class="product-card-inner">
               <a href="https://nl.the-sub.com/en/"></a>
-              <img class="owl-lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
+              <img class="lazy owl-lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
               <h3>Tasting bundle</h3>
               <p>4x Heineken TORPS, 2x H41 Wild Lager TORPS, 3x Affligem Blonde TORPS</p>
               <div class="price">€53,99</div>
@@ -473,7 +497,7 @@
           <div class="text-center product-card">
             <div class="product-card-inner">
               <a href="https://nl.the-sub.com/en/"></a>
-              <img class="owl-lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
+              <img class="lazy owl-lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
               <h3>Tasting bundle</h3>
               <p>4x Heineken TORPS, 2x H41 Wild Lager TORPS, 3x Affligem Blonde TORPS</p>
               <div class="price">€53,99</div>
@@ -492,3 +516,9 @@
     </div>
   </div>
 </div>
+
+
+<script> 
+  let images = document.querySelectorAll(".lazy");
+  lazyload(images);
+</script>
