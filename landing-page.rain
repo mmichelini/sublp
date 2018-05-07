@@ -1,0 +1,468 @@
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap-grid.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+  <link rel="stylesheet" href="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/css/styles.css"> 
+
+<!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script>
+      function genYT() {
+          var div, n,
+              v = document.getElementsByClassName("youtube-player");
+          for (n = 0; n < v.length; n++) {
+              div = document.createElement("div");
+              div.setAttribute("data-id", v[n].dataset.id);
+              div.innerHTML = labnolThumb(v[n].dataset.id);
+              div.onclick = labnolIframe;
+              v[n].appendChild(div);
+          }
+      }
+    document.addEventListener("DOMContentLoaded",
+					function () {genYT();}
+    );
+
+    function labnolThumb(id) {
+        var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
+            play = '<div class="play"></div>';
+        return thumb.replace("ID", id) + play;
+    }
+    function labnolIframe() {
+        var iframe = document.createElement("iframe");
+        var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+        iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "1");
+        this.parentNode.replaceChild(iframe, this);
+    }    
+    $(document).ready(function(){
+      $("#hide").click(function(){
+          $(".video-container").hide();
+      });
+      $("#show").click(function(){
+          $(".video-container").show();
+      });
+		 $("#hide").click(function(){
+		  	$(".video-inner .youtube-player iframe").get(0).remove();
+       	genYT();
+		 });
+      $('.carousel-lifestyle').owlCarousel({
+          loop:true,
+          nav:true,
+          autoWidth:true,
+          center: true,
+          responsive:{
+              0:{ items:1 },
+              600:{ items:2 },
+              1000:{ items:3 }
+          }
+      })
+
+      $('.carousel-subs').owlCarousel({
+          loop:true,
+          nav:true,
+          margin: 20,
+          responsive:{
+              0:{ items:1 },
+              600:{ items:2 },
+              1000:{ items:4, loop:false }
+          }
+      })
+
+      $('.carousel-ugc').owlCarousel({
+          loop:true,
+          nav:true,
+          margin: 20,
+          responsive:{
+              0:{ items:1 },
+              600:{ items:2 },
+              1000:{ items:4 }
+          }
+      })
+
+      $('.carousel-beers').owlCarousel({
+          loop:true,
+          nav:true,
+          margin: 20,
+          responsive:{
+              0:{ items:1 },
+              600:{ items:3, nav:true },
+              1000:{ items:4 }
+          }
+      })
+    });
+  </script>
+<div class="wrapper view-home">
+  <!-- Hero - Start -->
+  <div class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm col-md-8 offset-md-2 text-center">
+          <h2>The Sub</h2>
+          <h1>Premium draught beer on tap, at home</h1>
+          <h4>Pour like a pro and enjoy the best of beer with THE SUB.</h4>
+          <button class="btn-green" id="show">Learn more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hero - End -->
+
+  <!-- USP - Start -->
+  <div class="usp">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          {% if shop.language == 'en' %}
+          	<h1>The smooth way to dispense beer at home</h1>
+						<p>Designed to hold 2 litres of lager, THE SUB home beer tap delivers perfectly chilled, home draught beer in a stylish fashion. </p>
+          {% elseif shop.language == 'fr'%} 
+          	<h1>FRENCH TITLE</h1>
+						<p>FRENCH HEADER TEXT </p>          
+          {% elseif shop.language == 'es'%} 
+          	<h1>SPANISH TITLE</h1>
+						<p>SPANISH HEADER TEXT </p>                   
+          {% elseif shop.language == 'it'%} 
+          	<h1>ITALIAN TITLE</h1>
+						<p>ITALIAN HEADER TEXT </p>                  
+          {% elseif shop.language == 'de'%} 
+          	<h1>GERMAN TITLE</h1>
+						<p>GERMAN HEADER TEXT </p>                      
+          {% elseif shop.language == 'nl'%} 
+          	<h1>DUTCH TITLE</h1>
+						<p>DUTCH HEADER TEXT </p>                       
+          {% endif %} 
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 usp-block">
+          <div class="usp-icon"><div class="icon-fresh"></div></div>
+          <div class="usp-content">
+            <h4>Freshly Draught Beer</h4>
+            <p>Pour your own draught beers at home.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 usp-block">
+          <div class="usp-icon"><div class="icon-torp"></div></div>
+          <div class="usp-content">
+            <h4>Your beer your way</h4>
+            <p>From a growing range of premium beer brands.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 usp-block">
+          <div class="usp-icon"><div class="icon-beers"></div></div>
+          <div class="usp-content">
+            <h4>2 litres of super cooled beer</h4>
+            <p>A loaded SUB holds 2 litres of beer.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 usp-block">
+          <div class="usp-icon"><div class="icon-date"></div></div>
+          <div class="usp-content">
+            <h4>Fresh for 15 days</h4>
+            <p>Keeps your beer ready to drink up to 15 days.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- USP - End -->
+
+  <!-- CAROUSEL - Start -->
+  <div class="carousel-box">
+    <div class="carousel-box-inner">
+      <div class="owl-carousel carousel-lifestyle">
+        <div class="item"><img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/1.jpg" alt="First slide"></div>
+        <div class="item"><img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/2.jpg" alt="First slide"></div>
+        <div class="item"><img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/3.jpg" alt="First slide"></div>
+        <div class="item"><img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/4.jpg" alt="First slide"></div>
+        <div class="item"><img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/5.jpg" alt="First slide"></div>
+        <div class="item"><img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/6.jpg" alt="First slide"></div>
+      </div>
+    </div>
+    <div class="carousel-box-bg">
+    </div>
+  </div>
+  <!-- CAROUSEL - End -->
+
+  <!-- SPECIFICATIONS - Start -->
+  <div class="specifications">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h1>Product specification</h1>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
+          <div class="spec-icon icon-dimensions"></div>
+          <div class="spec-content">
+            <p>Dimensions</p>
+            <h4>455 x 235 x 335mm</h4>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
+          <div class="spec-icon icon-beer"></div>
+          <div class="spec-content">
+            <p>Beer capacity</p>
+            <h4>2 LT (8 beers)</h4>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
+          <div class="spec-icon icon-energy"></div>
+          <div class="spec-content">
+            <p>Energy rating</p>
+            <h4>A+ (10 w in standby)</h4>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
+          <div class="spec-icon icon-weight"></div>
+          <div class="spec-content">
+            <p>Weight</p>
+            <h4>6.8 Kg</h4>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
+          <div class="spec-icon icon-noise"></div>
+          <div class="spec-content">
+            <p>Noise level</p>
+            <h4>25 DB</h4>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
+          <div class="spec-icon icon-guaranteed"></div>
+          <div class="spec-content">
+            <p>Guaranted</p>
+            <h4>2 Years</h4>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
+          <div class="spec-icon icon-temperature"></div>
+          <div class="spec-content">
+            <p>Chills to</p>
+            <h4>2°C (fridge cold is 6°)</h4>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
+          <div class="spec-icon icon-materials"></div>
+          <div class="spec-content">
+            <p>Materials</p>
+            <h4>Recyclable</h4>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
+          <div class="spec-icon icon-extra"></div>
+          <div class="spec-content">
+            <p>Also included</p>
+            <h4>0.9 M power cable <br> Magnetic drip tray</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- SPECIFICATIONS - End -->
+
+  <!-- TECHNOLOGY - Start -->
+  <div class="technology">
+    <div class="technology-inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-7 text-center">
+            <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg.png">
+          </div>
+          <div class="col-12 col-md-5 text">
+            <h2>TECHNOLOGY AT THE SERVICE OF TASTING</h2>
+
+            <h4>1. PERFECT PRESSURE</h4>
+            <p>THE SUB applies just the right amount of pressure to ensure the best quality beer.</p>
+
+            <h4>2. QUICK AND EASY</h4>
+            <p>THE SUB's unique horizontal design increases the contact area between the cooling chamber and the TORP, quickly chilling your beer.</p>
+
+            <h4>3. TOP QUALITY DRAUGHT</h4>
+            <p>The unique technology of the TORP packaging prevents any contact of the beer with the air.</p>
+
+            <h4>4. HIGHLY EFFICIENT</h4>
+            <p>Heat produced by THE SUB is released in order to keep your TORP perfectly chilled.</p>
+
+            <h4>5. SIMPLICITY AND PRECISION</h4>
+            <p>THE SUB is equipped with an electronic temperature sensor to ensure an ideal service temperature.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="technology-bg">
+    </div>
+  </div>
+  <!-- TECHNOLOGY - End -->
+
+  <!-- BEERS - Start -->
+  <div class="beers">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h1>FEATURED BEERS FROM AROUND THE WORLD</h1>
+          <p>THE SUB serves a growing range of draught beers from all over the world. Find your favourite and enjoy it at the perfect temperature.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
+          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-heineken.png">
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
+          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-desperados.png">
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
+          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-kalthausen.png">
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
+          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-sol.png">
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
+          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-wieckse.png">
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
+          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-pelforth.png">
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
+          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-tiger.png">
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
+          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-cruzcampo.png">
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
+          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-affligem.png">
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
+          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-moretti.png">
+        </div>
+        <div class="col-4 col-md-3 col-lg-2 col-xl-2 beers-logos-box">
+          <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/logos/top-banner-brand-up.png">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- BEERS - End -->
+
+  <!-- SUB OVERVIEW - Start -->
+  <div class="overview">
+    <div class="overview-inner">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-12 text-center">
+            <h1>Discover the sub</h1>
+          </div>
+          <div class="owl-carousel carousel-subs">
+            <div class="text-center product-card">
+              <a href="https://nl.the-sub.com/en/"></a>
+              <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_heineken.png">
+              <h3>The Sub Heineken edition</h3>
+              <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
+              <div class="price">€199.00</div>
+              <button class="btn-green">Shop now</button>
+            </div>
+            <div class="text-center product-card">
+              <a href="https://nl.the-sub.com/en/"></a>
+              <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_grey.png">
+              <h3>The Sub Grey edition</h3>
+              <p>Designed to hold 2 litres of lager, THE SUB Grey Edition home beer tap delivers perfectly chilled, home draught beer in a stylish fashion.</p>
+              <div class="price">€149.00</div>
+              <button class="btn-green">Shop now</button>
+            </div>
+            <div class="text-center product-card">
+              <a href="https://nl.the-sub.com/en/"></a>
+              <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_black.png">
+              <h3>The Sub Black edition</h3>
+              <p>With its classic black casing, THE SUB® Black Edition looks great in any interior. Enjoy the perfect draught at home.</p>
+              <div class="price">€149.00</div>
+              <button class="btn-green">Shop now</button>
+            </div>
+            <div class="text-center product-card">
+              <a href="https://nl.the-sub.com/en/"></a>
+              <img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_red.png">
+              <h3>The Sub Red edition</h3>
+              <p>Red alert: with its bold lacquer casing, THE SUB Rouge Edition will become the showpiece of your kitchen. Draught the perfect beer at home and make a statement.</p>
+              <div class="price">€149.00</div>
+              <button class="btn-green">Shop now</button>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+
+    <div class="overview-bg">
+    </div>
+  </div>
+  <!-- SUB OVERVIEW - End -->
+
+  <!-- UGC - Start -->
+  <div class="ugc">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-12 text-center">
+          <h1>The SUB in action!</h1>
+          <h3>Bring home the perfect draught experience with #thesub</h3>
+        </div>
+        <div class="owl-carousel carousel-ugc">
+          <div><img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/1.jpg"></div>
+          <div><img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/2.jpg"></div>
+          <div><img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/3.jpg"></div>
+          <div><img src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/4.jpg"></div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <!-- UGC - End -->
+
+  <!-- BEST SELLERS - Start -->
+  <div class="best-sellers">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-12 text-center">
+          <h1>Best sellers</h1>
+        </div>
+        <div class="owl-carousel carousel-beers">
+          <div class="text-center product-card">
+            <div class="product-card-inner">
+              <a href="https://nl.the-sub.com/en/"></a>
+              <img src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
+              <h3>Tasting bundle</h3>
+              <p>4x Heineken TORPS, 2x H41 Wild Lager TORPS, 3x Affligem Blonde TORPS</p>
+              <div class="price">€53,99</div>
+            </div>
+          </div>
+          <div class="text-center product-card">
+            <div class="product-card-inner">
+              <a href="https://nl.the-sub.com/en/"></a>
+              <img src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
+              <h3>Tasting bundle</h3>
+              <p>4x Heineken TORPS, 2x H41 Wild Lager TORPS, 3x Affligem Blonde TORPS</p>
+              <div class="price">€53,99</div>
+            </div>
+          </div>
+          <div class="text-center product-card">
+            <div class="product-card-inner">
+              <a href="https://nl.the-sub.com/en/"></a>
+              <img src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
+              <h3>Tasting bundle</h3>
+              <p>4x Heineken TORPS, 2x H41 Wild Lager TORPS, 3x Affligem Blonde TORPS</p>
+              <div class="price">€53,99</div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <!-- BEST SELLERS - End -->
+
+  <div class="video-container">
+    <div class="video-inner">
+      <div class="close" id="hide"></div>
+        <div class="youtube-player" data-id="k4t56cYn3UM"></div>
+    </div>
+  </div>
+</div>
+
+
