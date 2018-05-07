@@ -116,7 +116,7 @@ p {
   }
 }
 .hero {
-  background: #333 url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/the-sub-product-background-mob.jpg);
+  background: #333 url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/the-sub-product-background-mobile.jpg);
   background-size: cover;
   -webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 90%);
   clip-path: polygon(0 0,100% 0,100% 100%,0 90%);
