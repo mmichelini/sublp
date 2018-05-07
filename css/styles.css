@@ -1,11 +1,11 @@
-/* FONTS */
+  /* FONTS */
 @font-face {
     font-family: futura-book;
-    src: url(../fonts/futurastd-book.ttf);
+    src: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/fonts/futurastd-book.ttf);
 }
 @font-face {
     font-family: futura-bold;
-    src: url(../fonts/futurastd-bold.ttf);
+    src: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/fonts/futurastd-bold.ttf);
 }
 
 /* GENERAL */
@@ -31,9 +31,29 @@ h1,h2,h3,h4,h5 {
   font-weight: 500;
   line-height: 1;
 }
+h1 {
+  margin: 0.67em 0;
+}
+h2 {
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17rem;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1rem;
+  margin: 1.33em 0;
+}
+p {
+  line-height: 1.2;
+}
 @media (min-width: 576px) {
   h1 { font-size: 2.6rem; }
   h2 { font-size: 2rem; }
+}
+.row {
+  padding-top: 0;
 }
 
 .btn-green {
@@ -59,6 +79,7 @@ h1,h2,h3,h4,h5 {
 /* OWL CAROUSEL */
 .owl-carousel  {
   position: relative;
+  height: 100%;
 }
 .owl-nav {
   position: absolute;
@@ -95,16 +116,23 @@ h1,h2,h3,h4,h5 {
   }
 }
 .hero {
-  background: url(../img/the-sub-product-background-hero.jpg);
+  background: #333 url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/the-sub-product-background-mob.jpg);
   background-size: cover;
-  background-position: 20%;
   -webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 90%);
   clip-path: polygon(0 0,100% 0,100% 100%,0 90%);
   color: #fff;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.61);
 }
+@media (min-width: 576px) {
+  .hero {
+    background: #333 url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/the-sub-product-background-dt.jpg);
+  }
+}
 .hero h1, .hero h2, .hero h4 {
   color: #fff;
+}
+.hero h2 {
+   margin-top: 0;
 }
 
 /* USP */
@@ -127,10 +155,10 @@ h1,h2,h3,h4,h5 {
 .usp .usp-block h4 {
   margin: 10px 0;
 }
-.usp .usp-block .usp-icon .icon-beers { background: url(../img/usp/icon_beers.png); background-size: cover; width:100%; height:100%;}
-.usp .usp-block .usp-icon .icon-torp { background: url(../img/usp/icon_torp.png); background-size: cover; width:100%; height:100%;}
-.usp .usp-block .usp-icon .icon-fresh { background: url(../img/usp/icon_fresh.png); background-size: cover; width:100%; height:100%;}
-.usp .usp-block .usp-icon .icon-date { background: url(../img/usp/icon_date.png); background-size: cover; width:100%; height:100%;}
+.usp .usp-block .usp-icon .icon-beers { background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/usp/icon_beers.png); background-size: cover; width:100%; height:100%;}
+.usp .usp-block .usp-icon .icon-torp { background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/usp/icon_torp.png); background-size: cover; width:100%; height:100%;}
+.usp .usp-block .usp-icon .icon-fresh { background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/usp/icon_fresh.png); background-size: cover; width:100%; height:100%;}
+.usp .usp-block .usp-icon .icon-date { background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/usp/icon_date.png); background-size: cover; width:100%; height:100%;}
 
 /* CAROUSEL */
 .carousel-box, .carousel-box-inner, .carousel-box .owl-carousel .owl-item img {
@@ -150,7 +178,7 @@ h1,h2,h3,h4,h5 {
   top: 0;
   height: 300px;
   width: 100%;
-  z-index: -1;
+  z-index: 1;
   -webkit-clip-path: polygon(0% 0, 100% 10%, 100% 90%, 0 100%);
   clip-path: polygon(0% 0, 100% 10%, 100% 90%, 0 100%);
 }
@@ -160,6 +188,8 @@ h1,h2,h3,h4,h5 {
   }
 }
 .carousel-box-inner {
+  position: relative;
+  z-index: 2;
   background: #000;
   -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0 90%);
   clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0 90%);
@@ -216,15 +246,15 @@ h1,h2,h3,h4,h5 {
   float: left;
   margin-right: 20px;
 }
-.spec-icon.icon-beer { background: url(../img/icons/icon_beer.png); background-size: cover;}
-.spec-icon.icon-dimensions { background: url(../img/icons/icon_dimensions.png); background-size: cover;}
-.spec-icon.icon-energy { background: url(../img/icons/icon_energy.png); background-size: cover;}
-.spec-icon.icon-extra { background: url(../img/icons/icon_extra.png); background-size: cover;}
-.spec-icon.icon-guaranteed { background: url(../img/icons/icon_guaranteed.png); background-size: cover;}
-.spec-icon.icon-materials { background: url(../img/icons/icon_recycle.png); background-size: cover;}
-.spec-icon.icon-noise { background: url(../img/icons/icon_noise.png); background-size: cover;}
-.spec-icon.icon-temperature { background: url(../img/icons/icon_temperature.png); background-size: cover;}
-.spec-icon.icon-weight { background: url(../img/icons/icon_weight.png); background-size: cover;}
+.spec-icon.icon-beer { background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/icons/icon_beer.png); background-size: cover;}
+.spec-icon.icon-dimensions { background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/icons/icon_dimensions.png); background-size: cover;}
+.spec-icon.icon-energy { background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/icons/icon_energy.png); background-size: cover;}
+.spec-icon.icon-extra { background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/icons/icon_extra.png); background-size: cover;}
+.spec-icon.icon-guaranteed { background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/icons/icon_guaranteed.png); background-size: cover;}
+.spec-icon.icon-materials { background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/icons/icon_recycle.png); background-size: cover;}
+.spec-icon.icon-noise { background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/icons/icon_noise.png); background-size: cover;}
+.spec-icon.icon-temperature { background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/icons/icon_temperature.png); background-size: cover;}
+.spec-icon.icon-weight { background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/icons/icon_weight.png); background-size: cover;}
 
 /* TECHNOLOGY */
 .technology {
@@ -235,6 +265,8 @@ h1,h2,h3,h4,h5 {
   background: #f2f2f2;
   min-height: 750px;
   padding: 60px 0;
+  position: relative;
+  z-index: 2;
   -webkit-clip-path: polygon(0% 0%, 100% 3%, 100% 100%, 0 96%);
   clip-path: polygon(0% 0%, 100% 3%, 100% 100%, 0 96%);
 }
@@ -252,7 +284,7 @@ h1,h2,h3,h4,h5 {
   width: 100%;
   -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0 90%);
   clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0 90%);
-  z-index: -1;
+  z-index: 1;
 }
 .technology-inner img {
   width: 100%;
@@ -287,6 +319,8 @@ h1,h2,h3,h4,h5 {
   margin-top: 0;
 }
 .overview-inner {
+  position: relative;
+  z-index: 2;
   background: #3e3b38;
   min-height: 850px;
   padding: 80px 0;
@@ -307,7 +341,7 @@ h1,h2,h3,h4,h5 {
   width: 100%;
   -webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0 90%);
   clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0 90%);
-  z-index: -1;
+  z-index: 1;
 }
 .overview .product-card {
   position: relative;
@@ -390,7 +424,7 @@ h1,h2,h3,h4,h5 {
 .video-container {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 20;
   top: 0;
   bottom: 0;
   left: 0;
@@ -405,7 +439,7 @@ h1,h2,h3,h4,h5 {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: url(../img/icon_close.png); background-size: cover;
+  background: url(https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/icon_close.png); background-size: cover;
 }
 .video-inner iframe{
   width: 100%;
@@ -416,6 +450,36 @@ h1,h2,h3,h4,h5 {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+.youtube-player {
+  overflow: hidden;
+  padding-bottom: 100%;
+  position: relative;
+  margin-top: 30%;
+  height: 0;
+}
+.youtube-player iframe {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.youtube-player img {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.youtube-player img:hover {
+    -webkit-filter: brightness(75%);
+}    
+
 @media (min-width: 576px) {
   .video-inner .close {
     width: 32px;
@@ -427,9 +491,27 @@ h1,h2,h3,h4,h5 {
     width: 75%;
     height: 60%;
   }
+  .youtube-player {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    margin-top: 0;
+  }      
+  .youtube-player iframe {
+      width: 75%;
+      height: 60%;
+  }    
+  .youtube-player img {
+      width: 75%;
+      height: 60%;
+  }
+  } 
+
+  .youtube-player .play {
+    height: 100%;
+    width: 100%;
+    background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+    cursor: pointer;  
 }
-
-
-
-
 
