@@ -11,8 +11,8 @@
   <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
 
 
-  <script>
-
+  <script>  
+    $(document).ready(function(){
       $('.carousel-lifestyle').owlCarousel({
           loop:true,
           lazyLoad:true,
@@ -91,7 +91,7 @@
           <h2>The Sub</h2>
           <h1>Premium draught beer on tap, at home</h1>
           <h4>Pour like a pro and enjoy the best of beer with THE SUB.</h4>
-          <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&amp;showinfo=0" data-lity="""><button class="btn-green" id="show">Learn more</button></a>
+          <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&amp;showinfo=0" data-lity="""></a><button class="btn-green" id="show">Learn more</button></a>
         </div>
       </div>
     </div>
