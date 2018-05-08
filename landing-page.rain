@@ -12,45 +12,7 @@
 
 
   <script>
-      function genYT() {
-          var div, n,
-              v = document.getElementsByClassName("youtube-player");
-          for (n = 0; n < v.length; n++) {
-              div = document.createElement("div");
-              div.setAttribute("data-id", v[n].dataset.id);
-              div.innerHTML = labnolThumb(v[n].dataset.id);
-              div.onclick = labnolIframe;
-              v[n].appendChild(div);
-          }
-      }
-    document.addEventListener("DOMContentLoaded",
-          function () {genYT();}
-    );
 
-    function labnolThumb(id) {
-        var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
-            play = '<div class="play"></div>';
-        return thumb.replace("ID", id) + play;
-    }
-    function labnolIframe() {
-        var iframe = document.createElement("iframe");
-        var embed = "https://www.youtube.com/embed/ID?autoplay=1";
-        iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
-        iframe.setAttribute("frameborder", "0");
-        iframe.setAttribute("allowfullscreen", "1");
-        this.parentNode.replaceChild(iframe, this);
-    }    
-    $(document).ready(function(){
-      $("#hide").click(function(){
-          $(".video-container").hide();
-      });
-      $("#show").click(function(){
-          $(".video-container").show();
-      });
-     $("#hide").click(function(){
-        $(".video-inner .youtube-player iframe").get(0).remove();
-        genYT();
-     });
       $('.carousel-lifestyle').owlCarousel({
           loop:true,
           lazyLoad:true,
@@ -129,7 +91,7 @@
           <h2>The Sub</h2>
           <h1>Premium draught beer on tap, at home</h1>
           <h4>Pour like a pro and enjoy the best of beer with THE SUB.</h4>
-          <button class="btn-green" id="show">Learn more</button>
+          <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&amp;showinfo=0" data-lity="""><button class="btn-green" id="show">Learn more</button></a>
         </div>
       </div>
     </div>
@@ -504,12 +466,7 @@
   </div>
   <!-- BEST SELLERS - End -->
 
-  <div class="video-container">
-    <div class="video-inner">
-      <div class="close" id="hide"></div>
-        <div class="youtube-player" data-id="k4t56cYn3UM"></div>
-    </div>
-  </div>
+
 </div>
 
 
