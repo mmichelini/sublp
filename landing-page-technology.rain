@@ -80,22 +80,22 @@
             <h4>5. SIMPLICITA E PRECISIONE</h4>
             <p>Il SUB è dotato di un sensore di temperatura elettronico per garantire una temperatura di servizio ideale.</p>
           {% elseif shop.language == 'es'%} 
-            <h2>TECHNOLOGY AT THE SERVICE OF TASTING</h2>
+            <h2>Tecnología y calidad, combinación perfecta</h2>
 
-            <h4>1. PERFECT PRESSURE</h4>
-            <p>THE SUB applies just the right amount of pressure to ensure the best quality beer.</p>
+            <h4>1. PRESIÓN PERFECTA</h4>
+            <p>THE SUB utiliza la presión justa para tirar las mejores cañas de barril.</p>
 
-            <h4>2. QUICK AND EASY</h4>
-            <p>THE SUB's unique horizontal design increases the contact area between the cooling chamber and the TORP, quickly chilling your beer.</p>
+            <h4>2. FÁCIL Y RÁPIDO</h4>
+            <p>El diseño horizontal de THE SUB incrementa el área de contacto entre la cámara de refrigeración y el TORP para enfriar tu cerveza rápidamente.</p>
 
-            <h4>3. TOP QUALITY DRAUGHT</h4>
-            <p>The unique technology of the TORP packaging prevents any contact of the beer with the air.</p>
+            <h4>3. CALIDAD Y PRESTACIONES</h4>
+            <p>La tecnología única del TORP previene el contacto de la cerveza con aire en todo momento.</p>
 
-            <h4>4. HIGHLY EFFICIENT</h4>
-            <p>Heat produced by THE SUB is released in order to keep your TORP perfectly chilled.</p>
+            <h4>4. ALTA EFICIENCIA</h4>
+            <p>Para mantener tu TORP siempre frío, THE SUB emite todo el calor generado.</p>
 
-            <h4>5. SIMPLICITY AND PRECISION</h4>
-            <p>THE SUB is equipped with an electronic temperature sensor to ensure an ideal service temperature.</p>
+            <h4>5. SIMPLE Y PRECISO</h4>
+            <p>THE SUB tiene un sensor para asegurar que cada vez que tires una cerveza esté a una temperatura perfecta.</p>
           {% elseif shop.language == 'fr'%} 
             <h2>TECHNOLOGY AT THE SERVICE OF TASTING</h2>
 

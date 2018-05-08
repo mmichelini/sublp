@@ -1,35 +1,41 @@
-  <!-- UGC - Start -->
-  <div class="ugc">
+ <!-- Hero - Start -->
+  <div class="hero">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-sm-12 text-center">
+      <div class="row align-items-center">
+        <div class="col-sm col-md-8 offset-md-2 text-center">
            {% if shop.language == 'en' %}
-            <h1>The SUB in action!</h1>
-            <h3>Bring home the perfect draught experience with #thesub</h3>
+            <h2>The Sub</h2>
+            <h1>Premium draught beer on tap, at home</h1>
+            <h4>Pour like a pro and enjoy the best of beer with THE SUB.</h4>
+            <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&showinfo=0" data-lity="""><button class="btn-green" id="show">Learn more</button></a>
           {% elseif shop.language == 'nl'%} 
-            <h1>THE SUB IN ACTIE!</h1>
-            <h3>HAAL DE PERFECTE TAP ERVARING IN HUIS MET #THESUB</h3>
+            <h2>The Sub</h2>
+            <h1>HET PERFECTE BIERTJE ON TAP, AT HOME</h1>
+            <h4>TAP ALS EEN PRO EN GENIET VAN HET BESTE VAN BIER MET DE SUB</h4>
+            <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&showinfo=0" data-lity="""><button class="btn-green" id="show">Meer informatie</button></a>
            {% elseif shop.language == 'de'%} 
-            <h1>DER SUB IN AKTION!</h1>
-            <h3>HOLE DIE PERFEKTE FASSBIER ERFAHRUNG NACH HAUSE MIT #THESUB</h3>
+            <h2>The Sub</h2>
+            <h1>PERFEKTES BIER ZUM ZU HAUSE ZAPFEN</h1>
+            <h4>ZAPFE WIE EIN PROFI UND GENIESSEN SIE DAS BESTE BIER MIT DEM SUB.</h4>
+            <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&showinfo=0" data-lity="""><button class="btn-green" id="show">Mehr Informationen</button></a>
           {% elseif shop.language == 'it'%} 
-            <h1>THE SUB IN AZIONE!</h1>
-            <h3>PORTA A CASA LA PERFETTA ESPERIENZA NELLA SPILLATURA CON #THESUB</h3>
+            <h2>The Sub</h2>
+            <h1>LA PERFETTA BIRRA ALLA SPINA A CASA TUA.</h1>
+            <h4>SPINA COME UN PROFESSIONISTA E GODITI LA MIGLIORE BIRRA CON THE SUB.</h4>
+            <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&showinfo=0" data-lity="""><button class="btn-green" id="show">Scopri di più</button></a>
           {% elseif shop.language == 'es'%} 
-            <h1>The SUB in action!</h1>
-            <h3>Bring home the perfect draught experience with #thesub</h3>
+            <h2>The Sub</h2>
+            <h1>CERVEZA DE BARRIL, EN CASA</h1>
+            <h4>DISFRUTA DE LA MEJOR CERVEZA TIRADA DESDE TU PROPIO BAR CON THE SUB.</h4>
+            <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&showinfo=0" data-lity="""><button class="btn-green" id="show">Más información</button></a>
           {% elseif shop.language == 'fr'%} 
-            <h1>The SUB in action!</h1>
-            <h3>Bring home the perfect draught experience with #thesub</h3>
-          {% endif %}                       
+            <h2>The Sub</h2>
+            <h1>Premium draught beer on tap, at home</h1>
+            <h4>Pour like a pro and enjoy the best of beer with THE SUB.</h4>
+            <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&showinfo=0" data-lity="""><button class="btn-green" id="show">Learn more</button></a>
+          {% endif %}          
         </div>
-        <div class="owl-carousel carousel-ugc">
-          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/1.jpg">
-          <img class="lazy owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/2.jpg">
-          <img class="lazy owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/3.jpg">
-         <img class="lazy owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/4.jpg">
-        </div>
-      </div>  
+      </div>
     </div>
   </div>
-  <!-- UGC - End -->
+  <!-- Hero - End -->

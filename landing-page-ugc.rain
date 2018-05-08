@@ -16,8 +16,8 @@
             <h1>THE SUB IN AZIONE!</h1>
             <h3>PORTA A CASA LA PERFETTA ESPERIENZA NELLA SPILLATURA CON #THESUB</h3>
           {% elseif shop.language == 'es'%} 
-            <h1>The SUB in action!</h1>
-            <h3>Bring home the perfect draught experience with #thesub</h3>
+            <h1>¡EL SUB EN ACCIÓN!</h1>
+            <h3>LLÉVATE A CASA LA VERDADERA EXPERIENCIA DE CERVEZA DE BARRIL CON #THESUB</h3>
           {% elseif shop.language == 'fr'%} 
             <h1>The SUB in action!</h1>
             <h3>Bring home the perfect draught experience with #thesub</h3>
