@@ -16,11 +16,9 @@
       $('.carousel-lifestyle').owlCarousel({
           loop:true,
           lazyLoad:true,
-          nav:true,
           margin: 20,
-          center: true,
           responsive:{
-              0:{ items:1 },
+              0:{ items:1, nav: true},
               600:{ items:2 },
               1000:{ items:3 }
           }
@@ -113,42 +111,110 @@
             <h1>SPANISH TITLE</h1>
             <p>SPANISH HEADER TEXT </p>                   
           {% elseif shop.language == 'it'%} 
-            <h1>ITALIAN TITLE</h1>
-            <p>ITALIAN HEADER TEXT </p>                  
+            <h1>IL MODO PIÙ COOL DI SPILLARE LA BIRRA A CASA</h1>
+            <p>Progettato per contenere 2 litri di birra lager, la spillatrice THE SUB offre una birra alla spina perfettamente rinfrescata. Spilla la tua birra a casa con stile.</p>                  
           {% elseif shop.language == 'de'%} 
-            <h1>GERMAN TITLE</h1>
-            <p>GERMAN HEADER TEXT </p>                      
+            <h1>IHRE EIGENE BIERZAPFANLAGE FÜR ZUHAUSE</h1>
+            <p>Mit einem Fassungsvermögen von zwei Litern bietet die THE SUB Bierzapfanlage perfekt gekühltes Bier für zuhause. Frisch gezapftes Bier für zu Hause mit Stil.</p>
           {% elseif shop.language == 'nl'%} 
-            <h1>DUTCH TITLE</h1>
-            <p>DUTCH HEADER TEXT </p>                       
+            <h1>De soepele manier om thuis biertjes te tappen</h1>
+            <p>THE SUB thuistap is een tapsysteem met een opslag van max. 2 liter en zorgt op stijlvolle wijze voor heerlijk gekoelde, thuisgetapte biertjes.</p>                       
           {% endif %} 
         </div>
         <div class="col-sm-12 col-md-6 col-lg-3 usp-block">
           <div class="usp-icon"><div class="icon-fresh"></div></div>
           <div class="usp-content">
+          {% if shop.language == 'en' %}
             <h4>Freshly Draught Beer</h4>
             <p>Pour your own draught beers at home.</p>
+          {% elseif shop.language == 'nl'%} 
+            <h4>THUIS VERS GETAPT BIER</h4>
+            <p>Tap thuis een uitstekend biertje.</p>                 
+           {% elseif shop.language == 'de'%} 
+            <h4>FRISCH GEZAPFTES BIER</h4>
+            <p>Zapfen Sie Ihr eigenes Fassbier zu Hause.</p>   
+          {% elseif shop.language == 'it'%} 
+            <h4>BIRRA ALLA SPINA FRESCA</h4>
+            <p>Versati una buona birra alla spina a casa tua.</p>                     
+          {% elseif shop.language == 'es'%} 
+            <h4>CERVEZA FRESCA DE BARRIL</h4>
+            <p>Sírvete tus propias cervezas en casa.</p>                   
+          {% elseif shop.language == 'fr'%} 
+            <h4>FRENCH TITLE</h4>
+            <p>FRENCH HEADER TEXT</p>                     
+          {% endif %}             
           </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-3 usp-block">
           <div class="usp-icon"><div class="icon-torp"></div></div>
           <div class="usp-content">
+          {% if shop.language == 'en' %}
             <h4>Your beer your way</h4>
             <p>From a growing range of premium beer brands.</p>
+          {% elseif shop.language == 'nl'%} 
+            <h4>KEUZE UIT WERELDBIEREN</h4>
+            <p>Kies jouw favoriete bieren uit een groeiend aanbod wereldbieren.</p>                 
+           {% elseif shop.language == 'de'%} 
+            <h4>IHR BIER, WIE SIE ES WOLLEN</h4>
+            <p>Wählen Sie aus einem wachsenden Angebot von Premium-Biermarken Ihre Lieblingsbiere.</p>   
+          {% elseif shop.language == 'it'%} 
+            <h4>LA TUA BIRRA, A MODO TUO</h4>
+            <p>Scegli le tue birre preferite da una scelta sempre più ricca di brand premium.</p>                     
+          {% elseif shop.language == 'es'%} 
+            <h4>TU CERVEZA A TU ESTILO</h4>
+            <p>Elige tus cervezas favoritas de entre una gama cada vez mayor de marcas de cerveza premium.</p>                   
+          {% elseif shop.language == 'fr'%} 
+            <h4>FRENCH TITLE</h4>
+            <p>FRENCH HEADER TEXT</p>                     
+          {% endif %}                         
           </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-3 usp-block">
           <div class="usp-icon"><div class="icon-beers"></div></div>
           <div class="usp-content">
+          {% if shop.language == 'en' %}
             <h4>2 litres of super cooled beer</h4>
             <p>A loaded SUB holds 2 litres of beer.</p>
+          {% elseif shop.language == 'nl'%} 
+            <h4>PERFECT GEKOELD BIER</h4>
+            <p>THE SUB koelt het bier tot 2°C.</p>                 
+           {% elseif shop.language == 'de'%} 
+            <h4>2 LITER HERRLICH GEKÜHLTES BIER</h4>
+            <p>Eine geladene SUB fasst 2 Liter Bier.</p>   
+          {% elseif shop.language == 'it'%} 
+            <h4>2 LITRI DI BIRRA SUPER FRESCA</h4>
+            <p>THE SUB® contiene 2 litri di birra.</p>                     
+          {% elseif shop.language == 'es'%} 
+            <h4>2 LITROS DE CERVEZA SUPER FRIA</h4>
+            <p>2 Litros de cerveza super fría.</p>                   
+          {% elseif shop.language == 'fr'%} 
+            <h4>FRENCH TITLE</h4>
+            <p>FRENCH HEADER TEXT</p>                     
+          {% endif %}                   
           </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-3 usp-block">
           <div class="usp-icon"><div class="icon-date"></div></div>
           <div class="usp-content">
+          {% if shop.language == 'en' %}
             <h4>Fresh for 15 days</h4>
             <p>Keeps your beer ready to drink up to 15 days.</p>
+          {% elseif shop.language == 'nl'%} 
+            <h4>TOT WEL 15 DAGEN VERS BIER</h4>
+            <p>THE SUB houdt je bier gegarandeerd 15 dagen vers.</p>                 
+           {% elseif shop.language == 'de'%} 
+            <h4>Bis zu 15 Tage lang frisch</h4>
+            <p>THE SUB hält Ihr Bier bis zu zwei Wochen lang frisch.</p>   
+          {% elseif shop.language == 'it'%} 
+            <h4>FRESCHEZZA INTATTA PER 15 GIORNI</h4>
+            <p>THE SUB® preserva la qualità della tua birra fino a 15 giorni.</p>                     
+          {% elseif shop.language == 'es'%} 
+            <h4>FRESCA DURANTE 15 DÍAS</h4>
+            <p>THE SUB mantiene tu cerveza lista para beber durante 15 días.</p>                   
+          {% elseif shop.language == 'fr'%} 
+            <h4>FRENCH TITLE</h4>
+            <p>FRENCH HEADER TEXT</p>                     
+          {% endif %}                            
           </div>
         </div>
       </div>
@@ -197,121 +263,254 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 text-center">
-          <h1>Product specification</h1>
+
+          {% if shop.language == 'en' %}
+            <h1>Product specification</h1>
+          {% elseif shop.language == 'nl'%} 
+            <h1>Product specification</h1>               
+           {% elseif shop.language == 'de'%} 
+            <h1>Product specification</h1>
+          {% elseif shop.language == 'it'%} 
+            <h1>Product specification</h1>                   
+          {% elseif shop.language == 'es'%} 
+            <h1>Product specification</h1>             
+          {% elseif shop.language == 'fr'%} 
+            <h1>Product specification</h1>                   
+          {% endif %}                      
         </div>
         <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
           <div class="spec-icon icon-dimensions"></div>
-          <div class="spec-content">
-            <p>Dimensions</p>
+          <div class="spec-content">    
+          {% if shop.language == 'en' %}
+             <p>Dimensions</p>
+          {% elseif shop.language == 'nl'%} 
+            <p>Afmetingen</p>              
+           {% elseif shop.language == 'de'%} 
+            <p>Abmessungen</p>
+          {% elseif shop.language == 'it'%} 
+            <p>Dimensioni</p>                
+          {% elseif shop.language == 'es'%} 
+            <p>Dimensions</p>            
+          {% elseif shop.language == 'fr'%} 
+            <p>Dimensions</p>                
+          {% endif %}                                 
             <h4>455 x 235 x 335mm</h4>
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
           <div class="spec-icon icon-beer"></div>
           <div class="spec-content">
+          {% if shop.language == 'en' %}
+             <p>Beer capacity</p>
+             <h4>2 LT (8 beers)</h4>
+          {% elseif shop.language == 'nl'%} 
+            <p>Biercapaciteit</p>
+            <h4>2L (~ 8 glazen bier)</h4>              
+           {% elseif shop.language == 'de'%} 
+            <p>Bierkapazität</p>
+            <h4>2 Liter TORP</h4>
+          {% elseif shop.language == 'it'%} 
+            <p>Capacità di birra</p>
+            <h4>2 LT (8 BIRRE)</h4>                
+          {% elseif shop.language == 'es'%} 
             <p>Beer capacity</p>
-            <h4>2 LT (8 beers)</h4>
+            <h4>2 LT (8 beers)</h4>            
+          {% elseif shop.language == 'fr'%} 
+            <p>Beer capacity</p>
+            <h4>2 LT (8 beers)</h4>                
+          {% endif %}                        
+            
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
           <div class="spec-icon icon-energy"></div>
           <div class="spec-content">
+          {% if shop.language == 'en' %}
+             <p>Energy rating</p>
+             <h4>A+ (10 w in standby)</h4>
+          {% elseif shop.language == 'nl'%} 
+            <p>Energielabel</p>
+            <h4>A+ (10 watt verbruik in standby)</h4>              
+           {% elseif shop.language == 'de'%} 
+            <p>Energieeffizienz</p>
+            <h4>A+ (10 Watt im Standby)</h4>
+          {% elseif shop.language == 'it'%} 
+            <p>Classe energetica </p>
+            <h4>A+ (10 watt quando in funzione)</h4>                
+          {% elseif shop.language == 'es'%} 
             <p>Energy rating</p>
-            <h4>A+ (10 w in standby)</h4>
+            <h4>A+ (10 w in standby)</h4>            
+          {% elseif shop.language == 'fr'%} 
+            <p>Energy rating</p>
+            <h4>A+ (10 w in standby)</h4>                
+          {% endif %}              
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
           <div class="spec-icon icon-weight"></div>
           <div class="spec-content">
-            <p>Weight</p>
+           {% if shop.language == 'en' %}
+             <p>Weight</p>
+          {% elseif shop.language == 'nl'%} 
+            <p>Gewicht</p>              
+           {% elseif shop.language == 'de'%} 
+            <p>Gewicht</p>
+          {% elseif shop.language == 'it'%} 
+            <p>Peso</p>                
+          {% elseif shop.language == 'es'%} 
+            <p>Weight</p>            
+          {% elseif shop.language == 'fr'%} 
+            <p>Weight</p>                
+          {% endif %}     
             <h4>6.8 Kg</h4>
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
           <div class="spec-icon icon-noise"></div>
           <div class="spec-content">
-            <p>Noise level</p>
+           {% if shop.language == 'en' %}
+             <p>Noise level</p>
+          {% elseif shop.language == 'nl'%} 
+            <p>Geluidsniveau</p>              
+           {% elseif shop.language == 'de'%} 
+            <p>Geräuschpegel</p>
+          {% elseif shop.language == 'it'%} 
+            <p>Livello di rumore</p>                
+          {% elseif shop.language == 'es'%} 
+            <p>Noise level</p>            
+          {% elseif shop.language == 'fr'%} 
+            <p>Noise level</p>                
+          {% endif %}     
             <h4>25 DB</h4>
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
           <div class="spec-icon icon-guaranteed"></div>
           <div class="spec-content">
+           {% if shop.language == 'en' %}
             <p>Guaranted</p>
             <h4>2 Years</h4>
+          {% elseif shop.language == 'nl'%} 
+            <p>Fabrieksgarantie</p>
+            <h4>2 jaar</h4>         
+           {% elseif shop.language == 'de'%} 
+            <p>Garantie</p>
+            <h4>2 Jahre</h4>
+          {% elseif shop.language == 'it'%} 
+            <p>Garanzia</p>
+            <h4>2 anni</h4>
+          {% elseif shop.language == 'es'%} 
+            <p>Guaranted</p>
+            <h4>2 Years</h4>       
+          {% elseif shop.language == 'fr'%} 
+            <p>Guaranted</p>
+            <h4>2 Years</h4>           
+          {% endif %}                 
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
           <div class="spec-icon icon-temperature"></div>
           <div class="spec-content">
+           {% if shop.language == 'en' %}
             <p>Chills to</p>
             <h4>2°C (fridge cold is 6°)</h4>
+          {% elseif shop.language == 'nl'%} 
+            <p>Koelt tot</p>
+            <h4>2°C (KOELKASTKOUD IS 6°)</h4>        
+           {% elseif shop.language == 'de'%} 
+            <p>Kühlt auf</p>
+            <h4>2° C (die Kühlschranktemperatur beträgt 6° C)</h4>
+          {% elseif shop.language == 'it'%} 
+            <p>Raffredda a</p>
+            <h4>2 °C (temperatura del frigorifero 6 °C)</h4>
+          {% elseif shop.language == 'es'%} 
+            <p>Chills to</p>
+            <h4>2°C (fridge cold is 6°)</h4>      
+          {% elseif shop.language == 'fr'%} 
+            <p>Chills to</p>
+            <h4>2°C (fridge cold is 6°)</h4>          
+          {% endif %}              
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
           <div class="spec-icon icon-materials"></div>
           <div class="spec-content">
+           {% if shop.language == 'en' %}
             <p>Materials</p>
-            <h4>Recyclable</h4>
+            <h4>100% Recyclable</h4>
+          {% elseif shop.language == 'nl'%} 
+            <p>Materialen</p>
+            <h4>100% recyclebaar</h4>       
+           {% elseif shop.language == 'de'%} 
+            <p>Materialien</p>
+            <h4>100% recyclebar</h4>
+          {% elseif shop.language == 'it'%} 
+            <p>Materiali</p>
+            <h4>100% riciclabile</h4>
+          {% elseif shop.language == 'es'%} 
+            <p>Materials</p>
+            <h4>Recyclable</h4>   
+          {% elseif shop.language == 'fr'%} 
+            <p>Materials</p>
+            <h4>Recyclable</h4>   
+          {% endif %}                          
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-4 spec-block">
           <div class="spec-icon icon-extra"></div>
           <div class="spec-content">
+           {% if shop.language == 'en' %}
             <p>Also included</p>
             <h4>0.9 M power cable <br> Magnetic drip tray</h4>
+          {% elseif shop.language == 'nl'%} 
+            <p>Inclusief</p>
+            <h4>Magnetisch lekbakje <br> 0.9 m electriciteitskabel</h4>
+           {% elseif shop.language == 'de'%} 
+            <p>Auch enthalten</p>
+            <h4>Magnetische Abtropfschale <br> 0,9 m langes Stromkabel</h4>
+          {% elseif shop.language == 'it'%} 
+            <p>Include anche</p>
+            <h4>Vassoio magnetico <br> Cavo di alimentazione lungo 0,9 m</h4>
+          {% elseif shop.language == 'es'%} 
+            <p>Also included</p>
+            <h4>0.9 M power cable <br> Magnetic drip tray</h4>
+          {% elseif shop.language == 'fr'%} 
+            <p>Also included</p>
+            <h4>0.9 M power cable <br> Magnetic drip tray</h4>
+          {% endif %}               
           </div>
         </div>
       </div>
     </div>
   </div>
   <!-- SPECIFICATIONS - End -->
-
-  <!-- TECHNOLOGY - Start -->
-  <div class="technology">
-    <div class="technology-inner">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-7 text-center">
-            <img class="lazy" 
-              src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/350x250&text=placeholder.png"
-              data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg.png" 
-              data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg-mobile.png 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg.png">
-          </div>
-          <div class="col-12 col-md-5 text">
-            <h2>TECHNOLOGY AT THE SERVICE OF TASTING</h2>
-
-            <h4>1. PERFECT PRESSURE</h4>
-            <p>THE SUB applies just the right amount of pressure to ensure the best quality beer.</p>
-
-            <h4>2. QUICK AND EASY</h4>
-            <p>THE SUB's unique horizontal design increases the contact area between the cooling chamber and the TORP, quickly chilling your beer.</p>
-
-            <h4>3. TOP QUALITY DRAUGHT</h4>
-            <p>The unique technology of the TORP packaging prevents any contact of the beer with the air.</p>
-
-            <h4>4. HIGHLY EFFICIENT</h4>
-            <p>Heat produced by THE SUB is released in order to keep your TORP perfectly chilled.</p>
-
-            <h4>5. SIMPLICITY AND PRECISION</h4>
-            <p>THE SUB is equipped with an electronic temperature sensor to ensure an ideal service temperature.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="technology-bg">
-    </div>
-  </div>
-  <!-- TECHNOLOGY - End -->
+ {% include 'snippets/landing-page-technology.rain' %}
 
   <!-- BEERS - Start -->
   <div class="beers">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 text-center">
+           {% if shop.language == 'en' %}
+            <h1>FEATURED BEERS FROM AROUND THE WORLD</h1>
+            <p>THE SUB serves a growing range of draught beers from all over the world. Find your favourite and enjoy it at the perfect temperature.</p>
+          {% elseif shop.language == 'nl'%} 
+            <h1>SELECTIE VAN ONZE BIEREN</h1>
+            <p>THE SUB biedt een groeiend assortiment aan tapbieren uit de hele wereld. Vindt jouw favoriet en geniet ervan op de perfecte temperatuur.</p>
+           {% elseif shop.language == 'de'%} 
+          <h1>AUSGESUCHTE INTERNATIONALE BIERE</h1>
+            <p>THE SUB bietet eine immer größere Auswahl internationaler Biere. Finde Dein Lieblingsbier und genieße es perfekt gekühlt.</p>
+          {% elseif shop.language == 'it'%} 
+          <h1>LA NOSTRA SELEZIONE INTERNAZIONALE DI BIRRE</h1>
+            <p>THE SUB serve una gamma crescente di birre alla spina provenienti da tutto il mondo. Trova la tua preferita e goditela alla temperatura perfetta.</p>
+          {% elseif shop.language == 'es'%} 
+          <h1>"CERVEZAS DESTACADAS ALREDEDOR DEL MUNDO</h1>
+            <p>Disfruta con THE SUB de una selección de las mejores cervezas de barril del mundo. Elije tu favorita y disfrútala a la temperatura perfecta.</p>
+          {% elseif shop.language == 'fr'%} 
           <h1>FEATURED BEERS FROM AROUND THE WORLD</h1>
-          <p>THE SUB serves a growing range of draught beers from all over the world. Find your favourite and enjoy it at the perfect temperature.</p>
+            <p>THE SUB serves a growing range of draught beers from all over the world. Find your favourite and enjoy it at the perfect temperature.</p>
+          {% endif %}            
+
         </div>
       </div>
 
@@ -361,38 +560,118 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-sm-12 text-center">
+           {% if shop.language == 'en' %}
             <h1>Discover the sub</h1>
+          {% elseif shop.language == 'nl'%} 
+            <h1>ONTDEK THE SUB</h1>
+           {% elseif shop.language == 'de'%} 
+            <h1>Entdecken THE SUB</h1>
+          {% elseif shop.language == 'it'%} 
+            <h1>SCOPRI THE SUB</h1>
+          {% elseif shop.language == 'es'%} 
+            <h1>DESCUBRE THE SUB</h1>  
+          {% elseif shop.language == 'fr'%} 
+            <h1>Discover the sub</h1> 
+          {% endif %}             
           </div>
           <div class="owl-carousel carousel-subs">
             <div class="text-center product-card">
               <a href="https://nl.the-sub.com/en/"></a>
               <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_heineken.png">
-              <h3>The Sub Heineken edition</h3>
-              <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
+                 {% if shop.language == 'en' %}
+                    <h3>The Sub Heineken edition</h3>
+                    <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
+                {% elseif shop.language == 'nl'%} 
+                    <h3>The Sub Heineken edition</h3>
+                    <p>De behuizing van geanodiseerd aluminium geeft extra glans aan Marc Newsons luxueus ontwerp.</p>
+                 {% elseif shop.language == 'de'%} 
+                    <h3>The Sub Heineken edition</h3>
+                    <p>Das Gehäuse aus eloxiertem Aluminium mit Heineken-Logo verleiht dem Luxus-Design von Marc Newson eine edle Note. </p>
+                {% elseif shop.language == 'it'%} 
+                    <h3>The Sub Heineken edition</h3>
+                    <p>Il corpo in alluminio anodizzato e l’inconfondibile marchio Heineken aggiungono un tocco di classe al design esclusivo di Marc Newson.</p>
+                {% elseif shop.language == 'es'%} 
+                    <h3>The Sub Heineken edition</h3>
+                    <p>THE SUB es el último gadget de Heineken para que disfrutes de la mejor cerveza de barril en casa.</p>
+                {% elseif shop.language == 'fr'%} 
+                    <h3>The Sub Heineken edition</h3>
+                    <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
+                {% endif %}                          
               <div class="price">€199.00</div>
               <button class="btn-green">Shop now</button>
             </div>
             <div class="text-center product-card">
               <a href="https://nl.the-sub.com/en/"></a>
               <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_grey.png">
-              <h3>The Sub Grey edition</h3>
-              <p>Designed to hold 2 litres of lager, THE SUB Grey Edition home beer tap delivers perfectly chilled, home draught beer in a stylish fashion.</p>
+                 {% if shop.language == 'en' %}
+                    <h3>The Sub Grey edition</h3>
+                    <p>Designed to hold 2 litres of lager, THE SUB Grey Edition home beer tap delivers perfectly chilled, home draught beer in a stylish fashion.</p>
+                {% elseif shop.language == 'nl'%} 
+                    <h3>The Sub Grey edition</h3>
+                    <p>THE SUB Grey Edition-thuistap is een tapsysteem met een opslag van max 2 liter en zorgt op stijlvolle wijze voor heerlijk gekoelde, thuisgetapte biertjes.</p>
+                 {% elseif shop.language == 'de'%} 
+                    <h3>The Sub Grey edition</h3>
+                    <p>Mit einem Fassungsvermögen von zwei Litern bietet die THE SUB Grey Edition Bierzapfanlage perfekt gekühltes Bier für zuhause.</p>
+                {% elseif shop.language == 'it'%} 
+                    <h3>The Sub Grey edition</h3>
+                    <p>La spillatrice di birra THE SUB Grey Edition mantiene al fresco la tua birra alla spina senza rinunciare allo stile. </p>
+                {% elseif shop.language == 'es'%} 
+                    <h3>The Sub Grey edition</h3>
+                    <p>Con una capacidad de 2 litros de cerveza, el grifo de cerveza para casa THE SUB Grey Edition permite disfrutar de la mejor cerveza de barril en casa y con un estilo único.</p>
+                {% elseif shop.language == 'fr'%} 
+                    <h3>The Sub Grey edition</h3>
+                    <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
+                {% endif %}                   
               <div class="price">€149.00</div>
               <button class="btn-green">Shop now</button>
             </div>
             <div class="text-center product-card">
               <a href="https://nl.the-sub.com/en/"></a>
               <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_black.png">
-              <h3>The Sub Black edition</h3>
-              <p>With its classic black casing, THE SUB® Black Edition looks great in any interior. Enjoy the perfect draught at home.</p>
+                 {% if shop.language == 'en' %}
+                    <h3>The Sub Black edition</h3>
+                    <p>With its classic black casing, THE SUB® Black Edition looks great in any interior. Enjoy the perfect draught at home.</p>
+                {% elseif shop.language == 'nl'%} 
+                    <h3>The Sub Black edition</h3>
+                    <p>De klassiek zwarte behuizing van THE SUB® Black Edition past in ieder interieur. Geniet thuis van perfect tapbier met je Heineken thuistap.</p>
+                 {% elseif shop.language == 'de'%} 
+                    <h3>The Sub Black edition</h3>
+                    <p>Mit seinem klassisch schwarzen Gehäuse macht sich THE SUB® Black Edition überall gut. Genießen Sie frisch gezapftes Fassbier.</p>
+                {% elseif shop.language == 'it'%} 
+                    <h3>The Sub Black edition</h3>
+                    <p>Il design in nero di THE SUB® Black Edition è perfettamente in stile con qualsiasi tipo di arredamento. Goditi la birra perfetta. Alla spina, a casa tua.</p>
+                {% elseif shop.language == 'es'%} 
+                    <h3>The Sub Black edition</h3>
+                    <p>The SUB® se viste de negro en una edición elegante. La presión perfecta, la temperatura ideal y ahora también el color que más va contigo.</p>
+                {% elseif shop.language == 'fr'%} 
+                    <h3>The Sub Black edition</h3>
+                    <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
+                {% endif %}                
               <div class="price">€149.00</div>
               <button class="btn-green">Shop now</button>
             </div>
             <div class="text-center product-card">
               <a href="https://nl.the-sub.com/en/"></a>
               <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_red.png">
-              <h3>The Sub Red edition</h3>
-              <p>Red alert: with its bold lacquer casing, THE SUB Rouge Edition will become the showpiece of your kitchen. Draught the perfect beer at home and make a statement.</p>
+                 {% if shop.language == 'en' %}
+                    <h3>The Sub Red edition</h3>
+                    <p>Red alert: with its bold lacquer casing, THE SUB Rouge Edition will become the showpiece of your kitchen. Draught the perfect beer at home and make a statement.</p>
+                {% elseif shop.language == 'nl'%} 
+                    <h3>The Sub Red edition</h3>
+                    <p>Code Rood: dankzij het prachtige rood gelakte omhulsel is THE SUB® Rouge EDITION een schitterende stijlvolle toevoeging aan jouw keuken.</p>
+                 {% elseif shop.language == 'de'%} 
+                    <h3>The Sub Red edition</h3>
+                    <p>Alarmstufe Rot: THE SUB Rouge Edition im gewagten Hochglanzgehäuse hat das Zeug, zum echten Hingucker Deiner Küche zu werden.</p>
+                {% elseif shop.language == 'it'%} 
+                    <h3>The Sub Red edition</h3>
+                    <p>Allarme rosso: con il suo rivestimento in lamiera grezza, THE SUB Rouge Edition diventerà il pezzo forte della tua cucina. Crea la birra perfetta a casa ed esprimiti con stile.</p>
+                {% elseif shop.language == 'es'%} 
+                    <h3>The Sub Red edition</h3>
+                    <p>Llegas a casa y lo ves. Todo el estrés del día desaparece. Es el momento de disfrutar de una cerveza. Y vuelves a pensar: ¡cómo me gusta! Es THE SUB® Rouge.</p>
+                {% elseif shop.language == 'fr'%} 
+                    <h3>The Sub Red edition</h3>
+                    <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
+                {% endif %}                   
               <div class="price">€149.00</div>
               <button class="btn-green">Shop now</button>
             </div>
@@ -406,24 +685,7 @@
   </div>
   <!-- SUB OVERVIEW - End -->
 
-  <!-- UGC - Start -->
-  <div class="ugc">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-sm-12 text-center">
-          <h1>The SUB in action!</h1>
-          <h3>Bring home the perfect draught experience with #thesub</h3>
-        </div>
-        <div class="owl-carousel carousel-ugc">
-          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/1.jpg">
-          <img class="lazy owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/2.jpg">
-          <img class="lazy owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/3.jpg">
-         <img class="lazy owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/4.jpg">
-        </div>
-      </div>  
-    </div>
-  </div>
-  <!-- UGC - End -->
+{% include snippets/landing-page-ugc.rain %}
 
   <!-- BEST SELLERS - Start -->
   <div class="best-sellers">

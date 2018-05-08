@@ -1,0 +1,126 @@
+
+  <!-- TECHNOLOGY - Start -->
+  <div class="technology">
+    <div class="technology-inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-7 text-center">
+            <img class="lazy" 
+              src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/350x250&text=placeholder.png"
+              data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg.png" 
+              data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg-mobile.png 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg.png">
+          </div>
+          <div class="col-12 col-md-5 text">
+           {% if shop.language == 'en' %}
+            <h2>TECHNOLOGY AT THE SERVICE OF TASTING</h2>
+
+            <h4>1. PERFECT PRESSURE</h4>
+            <p>THE SUB applies just the right amount of pressure to ensure the best quality beer.</p>
+
+            <h4>2. QUICK AND EASY</h4>
+            <p>THE SUB's unique horizontal design increases the contact area between the cooling chamber and the TORP, quickly chilling your beer.</p>
+
+            <h4>3. TOP QUALITY DRAUGHT</h4>
+            <p>The unique technology of the TORP packaging prevents any contact of the beer with the air.</p>
+
+            <h4>4. HIGHLY EFFICIENT</h4>
+            <p>Heat produced by THE SUB is released in order to keep your TORP perfectly chilled.</p>
+
+            <h4>5. SIMPLICITY AND PRECISION</h4>
+            <p>THE SUB is equipped with an electronic temperature sensor to ensure an ideal service temperature.</p>
+          {% elseif shop.language == 'nl'%} 
+            <h2>Tech & Smaak, Perfect gecombineerd</h2>
+
+            <h4>1. PERFECTE DRUK</h4>
+            <p>THE SUB brengt de perfecte hoeveelheid druk aan om de beste bierkwaliteit te voorzien.</p>
+
+            <h4>2. SNEL EN EENVOUDIG</h4>
+            <p>THE SUB's unieke horizontale design verhoogd het contact tussen de koeling en de TORP, waardoor de TORP snel gekoeld wordt. </p>
+
+            <h4>3. TOP KWALITEIT TAP</h4>
+            <p>De unieke technologie van de TORP verpakking voorkomt elk contact van het bier met lucht.</p>
+
+            <h4>4. ENORM EFFICIËNT</h4>
+            <p>De hitte geproduceerd door THE SUB wordt vrijgegeven om de TORP perfect gekoeld te houden.</p>
+
+            <h4>5. EENVOUDIGHEID EN PRECISIE</h4>
+            <p>THE SUB is uitgerust met een elektronische temperatuursensor die zorgt voor de ideale temperatuur en service.</p>
+           {% elseif shop.language == 'de'%} 
+            <h2>Technologie & Geschmack, perfekt gepaart</h2>
+
+            <h4>1. Perfekter Druck</h4>
+            <p>THE SUB wendet genau den richtigen Druck an, um das beste Qualitätsbier zu gewährleisten.</p>
+
+            <h4>2. Schnell und einfach</h4>
+            <p>Das einzigartige horizontale Design von THE SUB erhöht die Kontaktfläche zwischen der Kühlkammer und dem TORP und kühlt somit ihr Bier schnellstmöglich ab.</p>
+
+            <h4>3. Hochwertiges Zapfbier</h4>
+            <p>Die einzigartige Technologie der TORP-Verpackung verhindert jeglichen Kontakt des Bieres mit der Luft.</p>
+
+            <h4>4. Hocheffizient</h4>
+            <p>Die von THE SUB produzierte Wärme wird freigesetzt, um Ihr TORP perfekt zu kühlen</p>
+
+            <h4>5. Simplizität und Präzision</h4>
+            <p>THE SUB ist mit einem elektronischen Temperatursensor ausgestattet, um eine optimale Betriebstemperatur zu gewährleisten</p>
+          {% elseif shop.language == 'it'%} 
+            <h2>Tecnologia e gusto, combinati perfettamente</h2>
+
+            <h4>1. PRESSIONE PERFETTA</h4>
+            <p>Il SUB permette di trovare a casa il servizio di una perfetta birra alla spina.</p>
+
+            <h4>2. FACILE E VELOCE</h4>
+            <p>Il SUB ha un design orizzontale unico che aumenta l'area di contatto tra la camera di raffreddamento e il TORP per rinfrescarlo più velocemente.</p>
+
+            <h4>3. QUALITÀ E PRESTAZIONI</h4>
+            <p>La tecnologia unica del TORP impedisce qualsiasi contatto con l'aria per mantenere intatta la qualità della birra e garantire un servizio perfetto.</p>
+
+            <h4>4. ECONOMIA E EFFICIENZA</h4>
+            <p>Per mantenere il vostro TORP sempre fresco il calore prodotto è rilasciato da THE SUB.</p>
+
+            <h4>5. SIMPLICITA E PRECISIONE</h4>
+            <p>Il SUB è dotato di un sensore di temperatura elettronico per garantire una temperatura di servizio ideale.</p>
+          {% elseif shop.language == 'es'%} 
+            <h2>TECHNOLOGY AT THE SERVICE OF TASTING</h2>
+
+            <h4>1. PERFECT PRESSURE</h4>
+            <p>THE SUB applies just the right amount of pressure to ensure the best quality beer.</p>
+
+            <h4>2. QUICK AND EASY</h4>
+            <p>THE SUB's unique horizontal design increases the contact area between the cooling chamber and the TORP, quickly chilling your beer.</p>
+
+            <h4>3. TOP QUALITY DRAUGHT</h4>
+            <p>The unique technology of the TORP packaging prevents any contact of the beer with the air.</p>
+
+            <h4>4. HIGHLY EFFICIENT</h4>
+            <p>Heat produced by THE SUB is released in order to keep your TORP perfectly chilled.</p>
+
+            <h4>5. SIMPLICITY AND PRECISION</h4>
+            <p>THE SUB is equipped with an electronic temperature sensor to ensure an ideal service temperature.</p>
+          {% elseif shop.language == 'fr'%} 
+            <h2>TECHNOLOGY AT THE SERVICE OF TASTING</h2>
+
+            <h4>1. PERFECT PRESSURE</h4>
+            <p>THE SUB applies just the right amount of pressure to ensure the best quality beer.</p>
+
+            <h4>2. QUICK AND EASY</h4>
+            <p>THE SUB's unique horizontal design increases the contact area between the cooling chamber and the TORP, quickly chilling your beer.</p>
+
+            <h4>3. TOP QUALITY DRAUGHT</h4>
+            <p>The unique technology of the TORP packaging prevents any contact of the beer with the air.</p>
+
+            <h4>4. HIGHLY EFFICIENT</h4>
+            <p>Heat produced by THE SUB is released in order to keep your TORP perfectly chilled.</p>
+
+            <h4>5. SIMPLICITY AND PRECISION</h4>
+            <p>THE SUB is equipped with an electronic temperature sensor to ensure an ideal service temperature.</p>
+          {% endif %}                           
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="technology-bg">
+    </div>
+  </div>
+  <!-- TECHNOLOGY - End -->
