@@ -12,7 +12,6 @@
 
 
   <script>
-      
       function genYT() {
           var div, n,
               v = document.getElementsByClassName("youtube-player");
@@ -56,6 +55,7 @@
           loop:true,
           lazyLoad:true,
           nav:true,
+          margin: 20,
           center: true,
           responsive:{
               0:{ items:1 },
@@ -199,35 +199,30 @@
     <div class="carousel-box-inner">
       <div class="owl-carousel carousel-lifestyle">
       <img class="lazy"
-           src="https://placehold.it/350x250&text=3-fallback"
+           src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/350x250&text=placeholder.png"
            data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/1.jpg"
            data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/1-mobile.jpg 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/1.jpg"
            width="1024" height="768" />        
-        <picture>
-           <source class="owl-lazy" media="(min-width: 450px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/2.jpg">
-           <source class="owl-lazy" media="(max-width: 449px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/2-mobile.jpg">
-          <img class="owl-lazy" data-src="https://placehold.it/350x250&text=3-fallback" alt="Second slide">
-        </picture>
-        <picture>
-           <source class="owl-lazy" media="(min-width: 450px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/3.jpg">
-           <source class="owl-lazy" media="(max-width: 449px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/3-mobile.jpg">
-          <img class="owl-lazy" data-src="https://placehold.it/350x250&text=3-fallback" alt="Third slide">
-        </picture>
-        <picture>
-           <source class="lazy owl-lazy" media="(min-width: 450px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/4.jpg">
-           <source class="lazy owl-lazy" media="(max-width: 449px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/4-mobile.jpg">
-          <img class="lazy owl-lazy" data-src="https://placehold.it/350x250&text=3-fallback" alt="Fourth slide">
-        </picture>
-        <picture>
-           <source class="owl-lazy" media="(min-width: 450px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/5.jpg">
-           <source class="owl-lazy" media="(max-width: 449px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/5-mobile.jpg">
-          <img class="owl-lazy" data-src="https://placehold.it/350x250&text=3-fallback" alt="Fith slide">
-        </picture>
-        <picture>
-           <source class="owl-lazy" media="(min-width: 450px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/6.jpg">
-           <source class="owl-lazy" media="(max-width: 449px)" data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/6-mobile.jpg">
-          <img class="owl-lazy" data-src="https://placehold.it/350x250&text=3-fallback" alt="Sixth slide">
-        </picture>        
+              <img class="lazy" 
+              src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/350x250&text=placeholder.png"
+              data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/2.jpg" 
+              data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/2-mobile.jpg 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/2.jpg">
+              <img class="lazy" 
+              src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/350x250&text=placeholder.png"
+              data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/3.jpg" 
+              data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/3-mobile.jpg 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/3.jpg">
+              <img class="lazy" 
+              src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/350x250&text=placeholder.png"
+              data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/4.jpg" 
+              data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/4-mobile.jpg 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/4.jpg">
+              <img class="lazy" 
+              src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/350x250&text=placeholder.png"
+              data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/5.jpg" 
+              data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/5-mobile.jpg 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/5.jpg">
+              <img class="lazy" 
+              src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/350x250&text=placeholder.png"
+              data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/6-.jpg" 
+              data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/6-mobile.jpg 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/6.jpg">
       </div>
     </div>
     <div class="carousel-box-bg">
@@ -317,7 +312,7 @@
         <div class="row">
           <div class="col-12 col-md-7 text-center">
             <img class="lazy" 
-              src="https://placehold.it/350x250&text=3-fallback"
+              src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/350x250&text=placeholder.png"
               data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg.png" 
               data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg-mobile.png 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/sub_technology_bg.png">
           </div>
@@ -417,7 +412,7 @@
             </div>
             <div class="text-center product-card">
               <a href="https://nl.the-sub.com/en/"></a>
-              <img class="owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_grey.png">
+              <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_grey.png">
               <h3>The Sub Grey edition</h3>
               <p>Designed to hold 2 litres of lager, THE SUB Grey Edition home beer tap delivers perfectly chilled, home draught beer in a stylish fashion.</p>
               <div class="price">€149.00</div>
@@ -425,7 +420,7 @@
             </div>
             <div class="text-center product-card">
               <a href="https://nl.the-sub.com/en/"></a>
-              <img class="owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_black.png">
+              <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_black.png">
               <h3>The Sub Black edition</h3>
               <p>With its classic black casing, THE SUB® Black Edition looks great in any interior. Enjoy the perfect draught at home.</p>
               <div class="price">€149.00</div>
@@ -433,7 +428,7 @@
             </div>
             <div class="text-center product-card">
               <a href="https://nl.the-sub.com/en/"></a>
-              <img class="owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_red.png">
+              <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_red.png">
               <h3>The Sub Red edition</h3>
               <p>Red alert: with its bold lacquer casing, THE SUB Rouge Edition will become the showpiece of your kitchen. Draught the perfect beer at home and make a statement.</p>
               <div class="price">€149.00</div>
@@ -479,7 +474,7 @@
           <div class="text-center product-card">
             <div class="product-card-inner">
               <a href="https://nl.the-sub.com/en/"></a>
-              <img class="lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
+              <img class="lazy owl-lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
               <h3>Tasting bundle</h3>
               <p>4x Heineken TORPS, 2x H41 Wild Lager TORPS, 3x Affligem Blonde TORPS</p>
               <div class="price">€53,99</div>
