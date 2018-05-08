@@ -26,7 +26,7 @@
           {% elseif shop.language == 'es'%} 
             <h2>The Sub</h2>
             <h1>CERVEZA DE BARRIL, EN CASA</h1>
-            <h4>DISFRUTA DE LA MEJOR CERVEZA TIRADA DESDE TU PROPIO BAR CON THE SUB.</h4>
+            <h4>DISFRUTA DE LA MEJOR CERVEZA DE BARRIL, TIRADA DESDE TU PROPIO BAR CON THE SUB.</h4>
             <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&showinfo=0" data-lity="""><button class="btn-green" id="show">Más información</button></a>
           {% elseif shop.language == 'fr'%} 
             <h2>The Sub</h2>
