@@ -8,8 +8,11 @@
 
 <!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+<!--   <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script> -->
 
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.8/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.8/jquery.lazy.plugins.min.js"></script>
+                
 
   <script>  
     $(document).ready(function(){
@@ -608,28 +611,29 @@
         <div class="owl-carousel carousel-beers">
           <div class="text-center product-card">
             <div class="product-card-inner">
-              <a href="{{ theme.lp_best_seller_01_url}}"></a>
-              <img class="lazy" data-src="{{ theme.lp_best_seller_01_img_url}}">
-              <h3{{ theme.lp_best_seller_01_title}}</h3>
-              <p>{{ theme.lp_best_seller_01_text}}</p>
-              <div class="price">{{ theme.lp_best_seller_01_price | money}}</div>
+              <a href="{{ theme.lp_best_seller_01_url }}"></a>
+              <img class="lazy" data-src="{{ theme.lp_best_seller_01_img_url }}">
+              <h3>{{ theme.lp_best_seller_01_title }}</h3>
+              <p>{{ theme.lp_best_seller_01_text }}</p>
+              <div class="price">{{ theme.lp_best_seller_01_price | money}}</div>            
             </div>
           </div>
           <div class="text-center product-card">
             <div class="product-card-inner">
-              <a href="{{ theme.lp_best_seller_02_url}}"></a>
-              <img class="lazy" data-src="{{ theme.lp_best_seller_02_img_url}}">
-              <h3{{ theme.lp_best_seller_02_title}}</h3>
-              <p>{{ theme.lp_best_seller_02_text}}</p>
+              <a href="{{ theme.lp_best_seller_02_url }}"></a>
+              <img class="lazy" data-src="{{ theme.lp_best_seller_02_img_url }}">
+              <h3>{{ theme.lp_best_seller_02_title }}</h3>
+              <p>{{ theme.lp_best_seller_02_text }}</p>
               <div class="price">{{ theme.lp_best_seller_02_price | money}}</div>
+                    
             </div>
           </div>
           <div class="text-center product-card">
+          <a href="{{ theme.lp_best_seller_03_url }}"></a> 
             <div class="product-card-inner">
-              <a href="{{ theme.lp_best_seller_03_url}}"></a>
-              <img class="lazy" data-src="{{ theme.lp_best_seller_03_img_url}}">
-              <h3{{ theme.lp_best_seller_03_title}}</h3>
-              <p>{{ theme.lp_best_seller_03_text}}</p>
+              <img class="lazy" data-src="{{ theme.lp_best_seller_03_img_url }}">
+              <h3>{{ theme.lp_best_seller_03_title }}</h3>
+              <p>{{ theme.lp_best_seller_03_text }}</p>
               <div class="price">{{ theme.lp_best_seller_03_price | money}}</div>
             </div>
           </div>
@@ -643,7 +647,12 @@
 </div>
 
 
-<script> 
+<!-- <script> 
   let images = document.querySelectorAll(".lazy");
   lazyload(images);
+</script> -->
+<script> 
+   $(function() {
+        $('.lazy').lazy();
+    });
 </script>
