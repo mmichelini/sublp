@@ -15,8 +15,8 @@
             <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&showinfo=0" data-lity="""><button class="btn-green" id="show">Meer informatie</button></a>
            {% elseif shop.language == 'de'%} 
             <h2>The Sub</h2>
-            <h1>PERFEKTES BIER ZUM ZU HAUSE ZAPFEN</h1>
-            <h4>ZAPFE WIE EIN PROFI UND GENIESSEN SIE DAS BESTE BIER MIT DEM SUB.</h4>
+            <h1>PERFEKTES BIER FÜR ZUHAUSE ZUM ZAPFEN</h1>
+            <h4>ZAPFEN SIE WIE EIN PROFI UND GENIESSEN SIE DAS BESTE BIER MIT DEM SUB.</h4>
             <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&showinfo=0" data-lity="""><button class="btn-green" id="show">Mehr Informationen</button></a>
           {% elseif shop.language == 'it'%} 
             <h2>The Sub</h2>
