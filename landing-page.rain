@@ -257,11 +257,11 @@
           {% elseif shop.language == 'nl'%} 
             <h1>Product specification</h1>               
            {% elseif shop.language == 'de'%} 
-            <h1>Product specification</h1>
+            <h1>Produktinformationen</h1>
           {% elseif shop.language == 'it'%} 
-            <h1>Product specification</h1>                   
+            <h1>Specifiche prodotto</h1>                   
           {% elseif shop.language == 'es'%} 
-            <h1>Product specification</h1>             
+            <h1>Especificaciones de producto</h1>             
           {% elseif shop.language == 'fr'%} 
             <h1>Product specification</h1>                   
           {% endif %}                      
@@ -564,7 +564,6 @@
           {% endif %}             
           </div>
           <div class="owl-carousel carousel-subs">
-{% if '/sub-lp/' in request.url %}            
           {% for product in collection.products %}
              <div class="text-center product-card">
               <a href="{{ product.url | url }}"></a>
@@ -574,110 +573,7 @@
               <div class="price">{{ product.price.price | money }}</div>
               <button class="btn-green">Shop now</button>
             </div>            
-           {% endfor %}  
-{% else %}
-             <div class="text-center product-card">
-              <a href="{{ theme.landing_page_sub_1_url | url }}"></a>
-              <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_heineken.png">
-                 {% if shop.language == 'en' %}
-                    <h3>The Sub Heineken edition </h3>
-                    <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
-
-                {% elseif shop.language == 'nl'%} 
-                    <h3>The Sub Heineken edition</h3>
-                    <p>De behuizing van geanodiseerd aluminium geeft extra glans aan Marc Newsons luxueus ontwerp.</p>
-                 {% elseif shop.language == 'de'%} 
-                    <h3>The Sub Heineken edition</h3>
-                    <p>Das Gehäuse aus eloxiertem Aluminium mit Heineken-Logo verleiht dem Luxus-Design von Marc Newson eine edle Note. </p>
-                {% elseif shop.language == 'it'%} 
-                    <h3>The Sub Heineken edition</h3>
-                    <p>Il corpo in alluminio anodizzato e l’inconfondibile marchio Heineken aggiungono un tocco di classe al design esclusivo di Marc Newson.</p>
-                {% elseif shop.language == 'es'%} 
-                    <h3>The Sub Heineken edition</h3>
-                    <p>THE SUB es el último gadget de Heineken para que disfrutes de la mejor cerveza de barril en casa.</p>
-                {% elseif shop.language == 'fr'%} 
-                    <h3>The Sub Heineken edition</h3>
-                    <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
-                {% endif %}                          
-              <div class="price">{{ theme.landing_page_sub_1_price | money  }}</div>
-              <button class="btn-green">Shop now</button>
-            </div>
-            <div class="text-center product-card">
-              <a href="{{ theme.landing_page_sub_2_url | url}}"></a>
-              <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_grey.png">
-                 {% if shop.language == 'en' %}
-                    <h3>The Sub Grey edition</h3>
-                    <p>Designed to hold 2 litres of lager, THE SUB Grey Edition home beer tap delivers perfectly chilled, home draught beer in a stylish fashion.</p>
-                {% elseif shop.language == 'nl'%} 
-                    <h3>The Sub Grey edition</h3>
-                    <p>THE SUB Grey Edition-thuistap is een tapsysteem met een opslag van max 2 liter en zorgt op stijlvolle wijze voor heerlijk gekoelde, thuisgetapte biertjes.</p>
-                 {% elseif shop.language == 'de'%} 
-                    <h3>The Sub Grey edition</h3>
-                    <p>Mit einem Fassungsvermögen von zwei Litern bietet die THE SUB Grey Edition Bierzapfanlage perfekt gekühltes Bier für zuhause.</p>
-                {% elseif shop.language == 'it'%} 
-                    <h3>The Sub Grey edition</h3>
-                    <p>La spillatrice di birra THE SUB Grey Edition mantiene al fresco la tua birra alla spina senza rinunciare allo stile. </p>
-                {% elseif shop.language == 'es'%} 
-                    <h3>The Sub Grey edition</h3>
-                    <p>Con una capacidad de 2 litros de cerveza, el grifo de cerveza para casa THE SUB Grey Edition permite disfrutar de la mejor cerveza de barril en casa y con un estilo único.</p>
-                {% elseif shop.language == 'fr'%} 
-                    <h3>The Sub Grey edition</h3>
-                    <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
-                {% endif %}                   
-              <div class="price">{{ theme.landing_page_sub_2_price | money}}</div>
-              <button class="btn-green">Shop now</button>
-            </div>
-            <div class="text-center product-card">
-              <a href="{{ theme.landing_page_sub_3_url | url }}"></a>
-              <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_black.png">
-                 {% if shop.language == 'en' %}
-                    <h3>The Sub Black edition</h3>
-                    <p>With its classic black casing, THE SUB® Black Edition looks great in any interior. Enjoy the perfect draught at home.</p>
-                {% elseif shop.language == 'nl'%} 
-                    <h3>The Sub Black edition</h3>
-                    <p>De klassiek zwarte behuizing van THE SUB® Black Edition past in ieder interieur. Geniet thuis van perfect tapbier met je Heineken thuistap.</p>
-                 {% elseif shop.language == 'de'%} 
-                    <h3>The Sub Black edition</h3>
-                    <p>Mit seinem klassisch schwarzen Gehäuse macht sich THE SUB® Black Edition überall gut. Genießen Sie frisch gezapftes Fassbier.</p>
-                {% elseif shop.language == 'it'%} 
-                    <h3>The Sub Black edition</h3>
-                    <p>Il design in nero di THE SUB® Black Edition è perfettamente in stile con qualsiasi tipo di arredamento. Goditi la birra perfetta. Alla spina, a casa tua.</p>
-                {% elseif shop.language == 'es'%} 
-                    <h3>The Sub Black edition</h3>
-                    <p>The SUB® se viste de negro en una edición elegante. La presión perfecta, la temperatura ideal y ahora también el color que más va contigo.</p>
-                {% elseif shop.language == 'fr'%} 
-                    <h3>The Sub Black edition</h3>
-                    <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
-                {% endif %}                
-              <div class="price">{{ theme.landing_page_sub_3_price | money}}</div>
-              <button class="btn-green">Shop now</button>
-            </div>
-            <div class="text-center product-card">
-              <a href="{{ theme.landing_page_sub_4_url | url}}"></a>
-              <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_red.png">
-                 {% if shop.language == 'en' %}
-                    <h3>The Sub Red edition</h3>
-                    <p>Red alert: with its bold lacquer casing, THE SUB Rouge Edition will become the showpiece of your kitchen. Draught the perfect beer at home and make a statement.</p>
-                {% elseif shop.language == 'nl'%} 
-                    <h3>The Sub Red edition</h3>
-                    <p>Code Rood: dankzij het prachtige rood gelakte omhulsel is THE SUB® Rouge EDITION een schitterende stijlvolle toevoeging aan jouw keuken.</p>
-                 {% elseif shop.language == 'de'%} 
-                    <h3>The Sub Red edition</h3>
-                    <p>Alarmstufe Rot: THE SUB Rouge Edition im gewagten Hochglanzgehäuse hat das Zeug, zum echten Hingucker Deiner Küche zu werden.</p>
-                {% elseif shop.language == 'it'%} 
-                    <h3>The Sub Red edition</h3>
-                    <p>Allarme rosso: con il suo rivestimento in lamiera grezza, THE SUB Rouge Edition diventerà il pezzo forte della tua cucina. Crea la birra perfetta a casa ed esprimiti con stile.</p>
-                {% elseif shop.language == 'es'%} 
-                    <h3>The Sub Red edition</h3>
-                    <p>Llegas a casa y lo ves. Todo el estrés del día desaparece. Es el momento de disfrutar de una cerveza. Y vuelves a pensar: ¡cómo me gusta! Es THE SUB® Rouge.</p>
-                {% elseif shop.language == 'fr'%} 
-                    <h3>The Sub Red edition</h3>
-                    <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
-                {% endif %}                   
-              <div class="price">{{ theme.landing_page_sub_4_price | money}}</div>
-              <button class="btn-green">Shop now</button>
-            </div>
-{% endif %}            
+           {% endfor %}           
           </div>
         </div>  
       </div>
@@ -712,29 +608,29 @@
         <div class="owl-carousel carousel-beers">
           <div class="text-center product-card">
             <div class="product-card-inner">
-              <a href="{{ theme.request_url }}"></a>
-              <img class="lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
-              <h3>Tasting bundle</h3>
-              <p>4x Heineken TORPS, 2x H41 Wild Lager TORPS, 3x Affligem Blonde TORPS</p>
-              <div class="price">€53,99</div>
+              <a href="{{ theme.lp_best_seller_01_url}}"></a>
+              <img class="lazy" data-src="{{ theme.lp_best_seller_01_img_url}}">
+              <h3{{ theme.lp_best_seller_01_title}}</h3>
+              <p>{{ theme.lp_best_seller_01_text}}</p>
+              <div class="price">{{ theme.lp_best_seller_01_price | money}}</div>
             </div>
           </div>
           <div class="text-center product-card">
             <div class="product-card-inner">
-              <a href="{{ theme.request_url }}"></a>
-              <img class="lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
-              <h3>Tasting bundle</h3>
-              <p>4x Heineken TORPS, 2x H41 Wild Lager TORPS, 3x Affligem Blonde TORPS</p>
-              <div class="price">€53,99</div>
+              <a href="{{ theme.lp_best_seller_02_url}}"></a>
+              <img class="lazy" data-src="{{ theme.lp_best_seller_02_img_url}}">
+              <h3{{ theme.lp_best_seller_02_title}}</h3>
+              <p>{{ theme.lp_best_seller_02_text}}</p>
+              <div class="price">{{ theme.lp_best_seller_02_price | money}}</div>
             </div>
           </div>
           <div class="text-center product-card">
             <div class="product-card-inner">
-              <a href="{{ theme.request_url }}"></a>
-              <img class="lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
-              <h3>Tasting bundle</h3>
-              <p>4x Heineken TORPS, 2x H41 Wild Lager TORPS, 3x Affligem Blonde TORPS</p>
-              <div class="price">€53,99</div>
+              <a href="{{ theme.lp_best_seller_03_url}}"></a>
+              <img class="lazy" data-src="{{ theme.lp_best_seller_03_img_url}}">
+              <h3{{ theme.lp_best_seller_03_title}}</h3>
+              <p>{{ theme.lp_best_seller_03_text}}</p>
+              <div class="price">{{ theme.lp_best_seller_03_price | money}}</div>
             </div>
           </div>
         </div>
