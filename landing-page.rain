@@ -18,26 +18,26 @@
           lazyLoad:true,
           margin: 20,
           responsive:{
-              0:{ items:1, nav: true},
-              600:{ items:2 },
+              0:{ items:1, nav: false},
+              600:{ items:2 , nav: false},
               1000:{ items:3, loop:false }
           }
       })
 
       $('.carousel-subs').owlCarousel({
-          loop:true,
-          nav:true,
+          loop:false,
+          nav:false,
           lazyLoad:true,
           margin: 20,
           responsive:{
-              0:{ items:1 },
+              0:{ items:1},
               600:{ items:2 },
-              1000:{ items:4, loop:false }
+              1000:{ items:4, loop:false, nav:false }
           }
       })
 
       $('.carousel-ugc').owlCarousel({
-          loop:true,
+          loop:false,
           nav:true,
           lazyLoad:true,
           margin: 20,
@@ -564,12 +564,25 @@
           {% endif %}             
           </div>
           <div class="owl-carousel carousel-subs">
-            <div class="text-center product-card">
-              <a href="https://nl.the-sub.com/en/"></a>
+{% if '/sub-lp/' in request.url %}            
+          {% for product in collection.products %}
+             <div class="text-center product-card">
+              <a href="{{ product.url | url }}"></a>
+              <img class="lazy" data-src="{{ product.data_01 | url }}">
+                    <h3>{{product.title}}</h3>
+                    <p>{{ product.description}}</p>
+              <div class="price">{{ product.price.price | money }}</div>
+              <button class="btn-green">Shop now</button>
+            </div>            
+           {% endfor %}  
+{% else %}
+             <div class="text-center product-card">
+              <a href="{{ theme.landing_page_sub_1_url | url }}"></a>
               <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_heineken.png">
                  {% if shop.language == 'en' %}
-                    <h3>The Sub Heineken edition</h3>
+                    <h3>The Sub Heineken edition </h3>
                     <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
+
                 {% elseif shop.language == 'nl'%} 
                     <h3>The Sub Heineken edition</h3>
                     <p>De behuizing van geanodiseerd aluminium geeft extra glans aan Marc Newsons luxueus ontwerp.</p>
@@ -586,11 +599,11 @@
                     <h3>The Sub Heineken edition</h3>
                     <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
                 {% endif %}                          
-              <div class="price">€199.00</div>
+              <div class="price">{{ theme.landing_page_sub_1_price | money  }}</div>
               <button class="btn-green">Shop now</button>
             </div>
             <div class="text-center product-card">
-              <a href="https://nl.the-sub.com/en/"></a>
+              <a href="{{ theme.landing_page_sub_2_url | url}}"></a>
               <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_grey.png">
                  {% if shop.language == 'en' %}
                     <h3>The Sub Grey edition</h3>
@@ -611,11 +624,11 @@
                     <h3>The Sub Grey edition</h3>
                     <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
                 {% endif %}                   
-              <div class="price">€149.00</div>
+              <div class="price">{{ theme.landing_page_sub_2_price | money}}</div>
               <button class="btn-green">Shop now</button>
             </div>
             <div class="text-center product-card">
-              <a href="https://nl.the-sub.com/en/"></a>
+              <a href="{{ theme.landing_page_sub_3_url | url }}"></a>
               <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_black.png">
                  {% if shop.language == 'en' %}
                     <h3>The Sub Black edition</h3>
@@ -636,11 +649,11 @@
                     <h3>The Sub Black edition</h3>
                     <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
                 {% endif %}                
-              <div class="price">€149.00</div>
+              <div class="price">{{ theme.landing_page_sub_3_price | money}}</div>
               <button class="btn-green">Shop now</button>
             </div>
             <div class="text-center product-card">
-              <a href="https://nl.the-sub.com/en/"></a>
+              <a href="{{ theme.landing_page_sub_4_url | url}}"></a>
               <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/subs/sub_red.png">
                  {% if shop.language == 'en' %}
                     <h3>The Sub Red edition</h3>
@@ -661,9 +674,10 @@
                     <h3>The Sub Red edition</h3>
                     <p>The Heineken-branded cover made of anodised aluminum gives an extra premium touch to Marc Newson's deluxe design.</p>
                 {% endif %}                   
-              <div class="price">€149.00</div>
+              <div class="price">{{ theme.landing_page_sub_4_price | money}}</div>
               <button class="btn-green">Shop now</button>
             </div>
+{% endif %}            
           </div>
         </div>  
       </div>
@@ -698,7 +712,7 @@
         <div class="owl-carousel carousel-beers">
           <div class="text-center product-card">
             <div class="product-card-inner">
-              <a href="https://nl.the-sub.com/en/"></a>
+              <a href="{{ theme.request_url }}"></a>
               <img class="lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
               <h3>Tasting bundle</h3>
               <p>4x Heineken TORPS, 2x H41 Wild Lager TORPS, 3x Affligem Blonde TORPS</p>
@@ -707,7 +721,7 @@
           </div>
           <div class="text-center product-card">
             <div class="product-card-inner">
-              <a href="https://nl.the-sub.com/en/"></a>
+              <a href="{{ theme.request_url }}"></a>
               <img class="lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
               <h3>Tasting bundle</h3>
               <p>4x Heineken TORPS, 2x H41 Wild Lager TORPS, 3x Affligem Blonde TORPS</p>
@@ -716,7 +730,7 @@
           </div>
           <div class="text-center product-card">
             <div class="product-card-inner">
-              <a href="https://nl.the-sub.com/en/"></a>
+              <a href="{{ theme.request_url }}"></a>
               <img class="lazy" data-src="https://static.webshopapp.com/shops/095692/files/191411270/400x400x1/tasting-bundle.jpg">
               <h3>Tasting bundle</h3>
               <p>4x Heineken TORPS, 2x H41 Wild Lager TORPS, 3x Affligem Blonde TORPS</p>

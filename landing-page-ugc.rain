@@ -1,4 +1,4 @@
-  <!-- UGC - Start -->
+<!-- UGC - Start -->
   <div class="ugc">
     <div class="container">
       <div class="row justify-content-center">
@@ -24,10 +24,10 @@
           {% endif %}                       
         </div>
         <div class="owl-carousel carousel-ugc">
-          <img class="lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/1.jpg">
-          <img class="lazy owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/2.jpg">
-          <img class="lazy owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/3.jpg">
-         <img class="lazy owl-lazy" data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/ugc/4.jpg">
+          <img class="lazy" data-src="{{ theme.landing_page_ugc_1_url | url }}">
+          <img class="lazy" data-src="{{ theme.landing_page_ugc_2_url | url }}">
+          <img class="lazy" data-src="{{ theme.landing_page_ugc_3_url | url }}">
+         <img class="lazy" data-src="{{ theme.landing_page_ugc_4_url | url }}">
         </div>
       </div>  
     </div>
