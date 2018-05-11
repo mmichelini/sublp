@@ -8,7 +8,6 @@
 
 <!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<!--   <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script> -->
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.8/jquery.lazy.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.8/jquery.lazy.plugins.min.js"></script>
@@ -557,7 +556,7 @@
           {% elseif shop.language == 'nl'%} 
             <h1>ONTDEK THE SUB</h1>
            {% elseif shop.language == 'de'%} 
-            <h1>Entdecken THE SUB</h1>
+            <h1>Entdecke THE SUB</h1>
           {% elseif shop.language == 'it'%} 
             <h1>SCOPRI THE SUB</h1>
           {% elseif shop.language == 'es'%} 
@@ -647,10 +646,6 @@
 </div>
 
 
-<!-- <script> 
-  let images = document.querySelectorAll(".lazy");
-  lazyload(images);
-</script> -->
 <script> 
    $(function() {
         $('.lazy').lazy();

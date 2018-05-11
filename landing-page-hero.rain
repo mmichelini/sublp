@@ -10,7 +10,7 @@
             <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&showinfo=0" data-lity="""><button class="btn-green" id="show">Learn more</button></a>
           {% elseif shop.language == 'nl'%} 
             <h2>The Sub</h2>
-            <h1>HET PERFECTE BIERTJE ON TAP, AT HOME</h1>
+            <h1>HET PERFECTE BIERTJE. VAN DE TAP, THUIS.</h1>
             <h4>TAP ALS EEN PRO EN GENIET VAN HET BESTE VAN BIER MET DE SUB</h4>
             <a href="//www.youtube.com/embed/k4t56cYn3UM?rel=0&showinfo=0" data-lity="""><button class="btn-green" id="show">Meer informatie</button></a>
            {% elseif shop.language == 'de'%} 

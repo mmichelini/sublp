@@ -44,7 +44,7 @@
             <p>De hitte geproduceerd door THE SUB wordt vrijgegeven om de TORP perfect gekoeld te houden.</p>
 
             <h4>5. EENVOUDIGHEID EN PRECISIE</h4>
-            <p>THE SUB is uitgerust met een elektronische temperatuursensor die zorgt voor de ideale temperatuur en service.</p>
+            <p>THE SUB is uitgerust met een elektronische temperatuursensor die zorgt voor de ideale tap temperatuur.</p>
            {% elseif shop.language == 'de'%} 
             <h2>Technologie & Geschmack, perfekt gepaart</h2>
 
@@ -60,7 +60,7 @@
             <h4>4. Hocheffizient</h4>
             <p>Die von THE SUB produzierte Wärme wird freigesetzt, um Ihr TORP perfekt zu kühlen</p>
 
-            <h4>5. Simplizität und Präzision</h4>
+            <h4>5. Einfach und präzise</h4>
             <p>THE SUB ist mit einem elektronischen Temperatursensor ausgestattet, um eine optimale Betriebstemperatur zu gewährleisten</p>
           {% elseif shop.language == 'it'%} 
             <h2>Tecnologia e gusto, combinati perfettamente</h2>
