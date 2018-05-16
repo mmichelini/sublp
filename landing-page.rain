@@ -573,7 +573,7 @@
                     <h3>{{product.title}}</h3>
                     <p>{{ product.description}}</p>
               <div class="price">{{ product.price.price | money }}</div>
-              <button class="btn-green">Shop now</button>
+              <button class="btn-green" onclick="location.href='{{ product.url | url }}'">Shop now</button>
             </div>            
            {% endfor %}           
           </div>
