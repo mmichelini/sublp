@@ -1,0 +1,35 @@
+<!-- UGC - Start -->
+  <div class="ugc">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-12 text-center">
+           {% if shop.language == 'en' %}
+            <h1>The SUB in action!</h1>
+            <h3>Bring home the perfect draught experience with #thesub</h3>
+          {% elseif shop.language == 'nl'%} 
+            <h1>THE SUB IN ACTIE!</h1>
+            <h3>HAAL DE PERFECTE TAP ERVARING IN HUIS MET #THESUB</h3>
+           {% elseif shop.language == 'de'%} 
+            <h1>DER SUB IN AKTION!</h1>
+            <h3>HOLE DIE PERFEKTE FASSBIER ERFAHRUNG NACH HAUSE MIT #THESUB</h3>
+          {% elseif shop.language == 'it'%} 
+            <h1>THE SUB IN AZIONE!</h1>
+            <h3>PORTA A CASA LA PERFETTA ESPERIENZA NELLA SPILLATURA CON #THESUB</h3>
+          {% elseif shop.language == 'es'%} 
+            <h1>¡EL SUB EN ACCIÓN!</h1>
+            <h3>LLÉVATE A CASA LA VERDADERA EXPERIENCIA DE CERVEZA DE BARRIL CON #THESUB</h3>
+          {% elseif shop.language == 'fr'%} 
+            <h1>The SUB in action!</h1>
+            <h3>Bring home the perfect draught experience with #thesub</h3>
+          {% endif %}                       
+        </div>
+        <div class="owl-carousel carousel-ugc">
+          <img class="lazy" data-src="{{ theme.landing_page_ugc_1_url | url }}">
+          <img class="lazy" data-src="{{ theme.landing_page_ugc_2_url | url }}">
+          <img class="lazy" data-src="{{ theme.landing_page_ugc_3_url | url }}">
+         <img class="lazy" data-src="{{ theme.landing_page_ugc_4_url | url }}">
+        </div>
+      </div>  
+    </div>
+  </div>
+  <!-- UGC - End -->

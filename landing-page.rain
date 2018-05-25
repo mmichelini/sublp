@@ -22,7 +22,7 @@
           responsive:{
               0:{ items:1, nav: false},
               600:{ items:2 , nav: false},
-              1000:{ items:3, loop:false }
+              1000:{ items:3, loop:false, nav:true }
           }
       })
 
@@ -34,7 +34,7 @@
           responsive:{
               0:{ items:1},
               600:{ items:2 },
-              1000:{ items:4, loop:false, nav:false }
+              1000:{ items:4, loop:false }
           }
       })
 
@@ -46,7 +46,7 @@
           responsive:{
               0:{ items:1 },
               600:{ items:2 },
-              1000:{ items:4, loop:false }
+              1000:{ items:4, loop:false , nav:true}
           }
       })
 
@@ -217,16 +217,16 @@
     <div class="carousel-box-inner">
       <div class="owl-carousel carousel-lifestyle">
       <img class="lazy"
-           src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/350x250&text=placeholder.png"
+           src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/1-mobile.jpg"
            data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/1.jpg"
            data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/1-mobile.jpg 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/1.jpg"
            width="1024" height="768" />        
               <img class="lazy" 
-              src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/350x250&text=placeholder.png"
-              data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/2.jpg" 
+              src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/2-mobile.jpg"
+              data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/2-mobile.jpg" 
               data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/2-mobile.jpg 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/2.jpg">
               <img class="lazy" 
-              src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/350x250&text=placeholder.png"
+              src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/3-mobile.jpg"
               data-src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/3.jpg" 
               data-srcset="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/3-mobile.jpg 450w, https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/img/gallery/3.jpg">
               <img class="lazy" 
@@ -653,6 +653,18 @@
     });
 var owl = $('.owl-carousel');
 owl.on('changed.owl.carousel', function(event) {
+  
  $('.lazy').lazy({})
-})  
+})
+$(document).ready(function(){
+ $( '.owl-dot' ).on( 'click', function() {
+  setTimeout(function(){ $('.lazy').lazy({}); console.log("clicked");}, 500);
+
+
+   
+   
+   
+ })
+    });              
+
 </script>
