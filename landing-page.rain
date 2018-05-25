@@ -9,8 +9,8 @@
 <!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.8/jquery.lazy.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.8/jquery.lazy.plugins.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.8/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.8/jquery.lazy.plugins.min.js"></script>
                 
 
   <script>  
@@ -647,24 +647,18 @@
 
 
 <script> 
-   $(function() {
-        $('.lazy').lazy({
-        });
-    });
-var owl = $('.owl-carousel');
-owl.on('changed.owl.carousel', function(event) {
+  var jqueryObj = $;
+   jqueryObj(function() {
+        jqueryObj('.lazy').lazy({});
+     var owl = jqueryObj('.owl-carousel');
+		 owl.on('changed.owl.carousel', function(event) {
+ 		jqueryObj('.lazy').lazy({});
+		});
+   jqueryObj( '.owl-dot' ).on( 'click', function() {
+    setTimeout(function(){ jqueryObj('.lazy').lazy({}); console.log("clicked");}, 500);
+   });     
+});
+
   
- $('.lazy').lazy({})
-})
-$(document).ready(function(){
- $( '.owl-dot' ).on( 'click', function() {
-  setTimeout(function(){ $('.lazy').lazy({}); console.log("clicked");}, 500);
-
-
-   
-   
-   
- })
-    });              
 
 </script>
