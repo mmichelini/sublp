@@ -648,6 +648,11 @@
 
 <script> 
    $(function() {
-        $('.lazy').lazy();
+        $('.lazy').lazy({
+        });
     });
+var owl = $('.owl-carousel');
+owl.on('changed.owl.carousel', function(event) {
+ $('.lazy').lazy({})
+})  
 </script>
