@@ -9,60 +9,10 @@
 <!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.8/jquery.lazy.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.8/jquery.lazy.plugins.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.8/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.8/jquery.lazy.plugins.min.js"></script>
                 
-
-  <script>  
-    $(document).ready(function(){
-      $('.carousel-lifestyle').owlCarousel({
-          loop:true,
-          lazyLoad:true,
-          margin: 20,
-          responsive:{
-              0:{ items:1, nav: false},
-              600:{ items:2 , nav: false},
-              1000:{ items:3, loop:false, nav:true }
-          }
-      })
-
-      $('.carousel-subs').owlCarousel({
-          loop:false,
-          nav:false,
-          lazyLoad:true,
-          margin: 20,
-          responsive:{
-              0:{ items:1},
-              600:{ items:2 },
-              1000:{ items:4, loop:false }
-          }
-      })
-
-      $('.carousel-ugc').owlCarousel({
-          loop:false,
-          nav:true,
-          lazyLoad:true,
-          margin: 20,
-          responsive:{
-              0:{ items:1 },
-              600:{ items:2 },
-              1000:{ items:4, loop:false , nav:true}
-          }
-      })
-
-      $('.carousel-beers').owlCarousel({
-          lazyLoad: true,
-          loop:true,
-          nav:true,
-          margin: 20,
-          responsive:{
-              0:{ items:1 },
-              600:{ items:3, nav:true },
-              1000:{ items:3, loop:false }
-          }
-      })
-    });
-  </script>
+ 
 <style>
       a,
     img {
@@ -569,7 +519,7 @@
           {% for product in collection.products %}
              <div class="text-center product-card">
               <a href="{{ product.url | url }}"></a>
-              <img class="lazy" data-src="{{ product.data_01 | url }}">
+              <img class="lazy" data-src="{{ product.image | url_image('300x250x2', product.fulltitle) }}">
                     <h3>{{product.title}}</h3>
                     <p>{{ product.description}}</p>
               <div class="price">{{ product.price.price | money }}</div>
@@ -644,21 +594,5 @@
 
 
 </div>
+ <script type="text/javascript" src="https://prod-assets-thesub-images.azurewebsites.net/cdn/sub/campaigns/worldcup/js/sublp.js"></script>
 
-
-<script> 
-  var jqueryObj = $;
-   jqueryObj(function() {
-        jqueryObj('.lazy').lazy({});
-     var owl = jqueryObj('.owl-carousel');
-		 owl.on('changed.owl.carousel', function(event) {
- 		jqueryObj('.lazy').lazy({});
-		});
-   jqueryObj( '.owl-dot' ).on( 'click', function() {
-    setTimeout(function(){ jqueryObj('.lazy').lazy({}); console.log("clicked");}, 500);
-   });     
-});
-
-  
-
-</script>
